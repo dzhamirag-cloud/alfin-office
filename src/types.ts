@@ -2,7 +2,8 @@ import type * as vscode from 'vscode';
 
 export interface AgentState {
   id: number;
-  terminalRef: vscode.Terminal;
+  /** VS Code terminal that owns this agent. Undefined in standalone CLI mode. */
+  terminalRef?: vscode.Terminal;
   projectDir: string;
   jsonlFile: string;
   fileOffset: number;
