@@ -241,6 +241,14 @@ export function useExtensionMessages(
       } else if (msg.type === 'agentSelected') {
         const id = msg.id as number;
         setSelectedAgent(id);
+      } else if (msg.type === 'agentMeta') {
+        const id = msg.id as number;
+        const ch = os.characters.get(id);
+        if (ch) {
+          if (msg.projectName) ch.projectName = msg.projectName as string;
+          if (msg.teamName) ch.teamName = msg.teamName as string;
+          if (msg.model) ch.model = msg.model as string;
+        }
       } else if (msg.type === 'agentStatus') {
         const id = msg.id as number;
         const status = msg.status as string;
