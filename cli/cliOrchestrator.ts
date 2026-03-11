@@ -190,6 +190,10 @@ export class CliOrchestrator {
     const settings = readSettings();
     this.webview.postMessage({ type: 'settingsLoaded', soundEnabled: settings.soundEnabled });
 
+    // Tell the frontend which source mode we're in
+    const source = this.opts.source || 'claude';
+    this.webview.postMessage({ type: 'sourceMode', source });
+
     // Send layout
     const layout = readLayoutFromFile() || this.defaultLayout;
     if (layout) {
@@ -207,7 +211,6 @@ export class CliOrchestrator {
     this.sendExistingAgents();
 
     // Start agent scanner (once)
-    const source = this.opts.source || 'claude';
     if (source === 'openclaw') {
       // OpenClaw mode: discover agents from ~/.openclaw/agents/
       if (!this.openclawScanner) {
@@ -217,7 +220,11 @@ export class CliOrchestrator {
             console.log(`[CLI] OpenClaw agent created: ${name} (id=${agentId})`);
           },
         });
-        this.openclawScanner.start();
+        const managedAgents = this.openclawScanner.start();
+        // Sync scanner's agents into orchestrator's map for existingAgents resync
+        for (const [id, agent] of managedAgents) {
+          this.agents.set(id, agent as unknown as AgentState);
+        }
       }
     } else {
       // Claude mode: scan ~/.claude/projects/ for sessions
@@ -258,8 +265,23 @@ export class CliOrchestrator {
       folderNames,
     });
 
-    // Re-send current statuses
+    // Re-send current statuses and meta
     for (const [agentId, agent] of this.agents) {
+      // Re-announce agent creation
+      this.webview.postMessage({ type: 'agentCreated', id: agentId });
+
+      // Send meta if available (OpenClaw agents have projectName/teamName)
+      const meta = agent as Record<string, unknown>;
+      if (meta.projectName || meta.teamName || meta.model) {
+        this.webview.postMessage({
+          type: 'agentMeta',
+          id: agentId,
+          ...(meta.projectName ? { projectName: meta.projectName } : {}),
+          ...(meta.model ? { model: meta.model } : {}),
+          ...(meta.teamName ? { teamName: meta.teamName } : {}),
+        });
+      }
+
       for (const [toolId, status] of agent.activeToolStatuses) {
         this.webview.postMessage({
           type: 'agentToolStart',

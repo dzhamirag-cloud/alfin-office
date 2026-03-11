@@ -137,6 +137,7 @@ function App() {
     layoutReady,
     loadedAssets,
     workspaceFolders,
+    sourceMode,
   } = useExtensionMessages(getOfficeState, editor.setLastSavedLayout, isEditDirty);
 
   const [isDebugMode, setIsDebugMode] = useState(false);
@@ -265,6 +266,7 @@ function App() {
         isDebugMode={isDebugMode}
         onToggleDebugMode={handleToggleDebugMode}
         workspaceFolders={workspaceFolders}
+        sourceMode={sourceMode}
       />
 
       {editor.isEditMode && editor.isDirty && (

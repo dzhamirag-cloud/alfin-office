@@ -11,6 +11,7 @@ interface BottomToolbarProps {
   isDebugMode: boolean;
   onToggleDebugMode: () => void;
   workspaceFolders: WorkspaceFolder[];
+  sourceMode?: 'claude' | 'openclaw';
 }
 
 const panelStyle: React.CSSProperties = {
@@ -51,6 +52,7 @@ export function BottomToolbar({
   isDebugMode,
   onToggleDebugMode,
   workspaceFolders,
+  sourceMode,
 }: BottomToolbarProps) {
   const [hovered, setHovered] = useState<string | null>(null);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
@@ -96,7 +98,7 @@ export function BottomToolbar({
             opacity: 0.6,
           }}
         >
-          Run 'claude' in a terminal
+          {sourceMode === 'openclaw' ? '🤖 OpenClaw Agents' : "Run 'claude' in a terminal"}
         </span>
       ) : (
         <div ref={folderPickerRef} style={{ position: 'relative' }}>
