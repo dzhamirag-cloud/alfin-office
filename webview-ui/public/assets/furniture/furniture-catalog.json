@@ -1,0 +1,101 @@
+{
+  "totalAssets": 8,
+  "assets": [
+    {
+      "id": "desk",
+      "name": "DEFAULT_DESK",
+      "label": "Default Desk",
+      "category": "desks",
+      "file": "furniture/desks/DEFAULT_DESK.png",
+      "width": 32,
+      "height": 32,
+      "footprintW": 2,
+      "footprintH": 2,
+      "isDesk": true
+    },
+    {
+      "id": "bookshelf",
+      "name": "DEFAULT_BOOKSHELF",
+      "label": "Default Bookshelf",
+      "category": "storage",
+      "file": "furniture/storage/DEFAULT_BOOKSHELF.png",
+      "width": 16,
+      "height": 32,
+      "footprintW": 1,
+      "footprintH": 2,
+      "isDesk": false
+    },
+    {
+      "id": "plant",
+      "name": "DEFAULT_PLANT",
+      "label": "Default Plant",
+      "category": "decor",
+      "file": "furniture/decor/DEFAULT_PLANT.png",
+      "width": 16,
+      "height": 24,
+      "footprintW": 1,
+      "footprintH": 1,
+      "isDesk": false
+    },
+    {
+      "id": "cooler",
+      "name": "DEFAULT_COOLER",
+      "label": "Default Cooler",
+      "category": "misc",
+      "file": "furniture/misc/DEFAULT_COOLER.png",
+      "width": 16,
+      "height": 24,
+      "footprintW": 1,
+      "footprintH": 1,
+      "isDesk": false
+    },
+    {
+      "id": "whiteboard",
+      "name": "DEFAULT_WHITEBOARD",
+      "label": "Default Whiteboard",
+      "category": "decor",
+      "file": "furniture/decor/DEFAULT_WHITEBOARD.png",
+      "width": 32,
+      "height": 16,
+      "footprintW": 2,
+      "footprintH": 1,
+      "isDesk": false
+    },
+    {
+      "id": "chair",
+      "name": "DEFAULT_CHAIR",
+      "label": "Default Chair",
+      "category": "chairs",
+      "file": "furniture/chairs/DEFAULT_CHAIR.png",
+      "width": 16,
+      "height": 16,
+      "footprintW": 1,
+      "footprintH": 1,
+      "isDesk": false
+    },
+    {
+      "id": "pc",
+      "name": "DEFAULT_PC",
+      "label": "Default PC",
+      "category": "electronics",
+      "file": "furniture/electronics/DEFAULT_PC.png",
+      "width": 16,
+      "height": 16,
+      "footprintW": 1,
+      "footprintH": 1,
+      "isDesk": false
+    },
+    {
+      "id": "lamp",
+      "name": "DEFAULT_LAMP",
+      "label": "Default Lamp",
+      "category": "decor",
+      "file": "furniture/decor/DEFAULT_LAMP.png",
+      "width": 16,
+      "height": 16,
+      "footprintW": 1,
+      "footprintH": 1,
+      "isDesk": false
+    }
+  ]
+}
