@@ -1,8 +1,8 @@
 /**
  * Pixel Agents CLI — Standalone pixel art office in the browser
  *
- * Serves the webview and auto-detects running Claude Code sessions.
- * Usage: pixel-agents [--port <number>]
+ * Serves the webview and auto-detects running agent sessions.
+ * Usage: pixel-agents [--port <number>] [--source claude|openclaw]
  */
 
 import * as path from 'path';
@@ -14,9 +14,12 @@ import { createServer } from './server.js';
 
 const DEFAULT_PORT = 7842;
 
-function parseArgs(): { port: number } {
+export type SourceType = 'claude' | 'openclaw';
+
+function parseArgs(): { port: number; source: SourceType } {
   const args = process.argv.slice(2);
   let port = DEFAULT_PORT;
+  let source: SourceType = 'claude';
   for (let i = 0; i < args.length; i++) {
     if (args[i] === '--port' && args[i + 1]) {
       port = parseInt(args[i + 1], 10);
@@ -25,14 +28,21 @@ function parseArgs(): { port: number } {
         process.exit(1);
       }
       i++;
+    } else if (args[i] === '--source' && args[i + 1]) {
+      const val = args[i + 1].toLowerCase();
+      if (val === 'openclaw' || val === 'claude') {
+        source = val;
+      } else {
+        console.error(`Invalid source: ${args[i + 1]} (expected: claude or openclaw)`);
+        process.exit(1);
+      }
+      i++;
     }
   }
-  return { port };
+  return { port, source };
 }
 
 function resolveDistDir(): string {
-  // In bundled mode: dist/cli.js → dist/ is the parent
-  // Use import.meta.url for ESM compatibility
   const thisFile = typeof __filename !== 'undefined' ? __filename : fileURLToPath(import.meta.url);
   const distDir = path.dirname(thisFile);
   const webviewDir = path.join(distDir, 'webview');
@@ -70,17 +80,19 @@ function openBrowser(url: string): void {
 }
 
 function main(): void {
-  const { port } = parseArgs();
+  const { port, source } = parseArgs();
   const distDir = resolveDistDir();
   const webviewDir = path.join(distDir, 'webview');
 
-  const orchestrator = new CliOrchestrator({ distDir });
+  const orchestrator = new CliOrchestrator({ distDir, source });
   const server = createServer(webviewDir, orchestrator);
+
+  const sourceLabel = source === 'openclaw' ? 'OpenClaw agents' : 'Claude Code sessions';
 
   server.listen(port, () => {
     const url = `http://localhost:${port}`;
     console.log(`\n🎮 Pixel Agents running at ${url}`);
-    console.log('   Watching for Claude Code sessions...');
+    console.log(`   Source: ${sourceLabel}`);
     console.log('   Press Ctrl+C to stop.\n');
     openBrowser(url);
   });
