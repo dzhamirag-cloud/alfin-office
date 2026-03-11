@@ -92,12 +92,12 @@ export class PixelAgentsViewProvider implements vscode.WebviewViewProvider {
         );
       } else if (message.type === 'focusAgent') {
         const agent = this.agents.get(message.id);
-        if (agent) {
+        if (agent?.terminalRef) {
           agent.terminalRef.show();
         }
       } else if (message.type === 'closeAgent') {
         const agent = this.agents.get(message.id);
-        if (agent) {
+        if (agent?.terminalRef) {
           agent.terminalRef.dispose();
         }
       } else if (message.type === 'saveAgentSeats') {
@@ -307,7 +307,7 @@ export class PixelAgentsViewProvider implements vscode.WebviewViewProvider {
       this.activeAgentId.current = null;
       if (!terminal) return;
       for (const [id, agent] of this.agents) {
-        if (agent.terminalRef === terminal) {
+        if (agent.terminalRef && agent.terminalRef === terminal) {
           this.activeAgentId.current = id;
           webviewView.webview.postMessage({ type: 'agentSelected', id });
           break;
@@ -317,7 +317,7 @@ export class PixelAgentsViewProvider implements vscode.WebviewViewProvider {
 
     vscode.window.onDidCloseTerminal((closed) => {
       for (const [id, agent] of this.agents) {
-        if (agent.terminalRef === closed) {
+        if (agent.terminalRef && agent.terminalRef === closed) {
           if (this.activeAgentId.current === id) {
             this.activeAgentId.current = null;
           }

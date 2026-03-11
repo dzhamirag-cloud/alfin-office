@@ -181,6 +181,10 @@ export function persistAgents(
 ): void {
   const persisted: PersistedAgent[] = [];
   for (const agent of agents.values()) {
+    // CLI-mode agents have no terminal — skip them
+    if (!agent.terminalRef) {
+      continue;
+    }
     persisted.push({
       id: agent.id,
       terminalName: agent.terminalRef.name,
