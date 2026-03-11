@@ -25,10 +25,14 @@ import {
 import type { LayoutWatcher } from '../src/layoutPersistence.js';
 import { readSeats, writeSeats, readSettings, writeSettings } from './persistence.js';
 import { startSessionScanner } from './sessionScanner.js';
+import { OpenClawScanner } from './openclawScanner.js';
+import type { SourceType } from './main.js';
 
 export interface CliOrchestratorOptions {
   /** Path to dist/ directory containing assets/ and webview/ */
   distDir: string;
+  /** Event source: 'claude' (default) or 'openclaw' */
+  source?: SourceType;
 }
 
 export class CliOrchestrator {
@@ -46,6 +50,7 @@ export class CliOrchestrator {
   private defaultLayout: Record<string, unknown> | null = null;
   private layoutWatcher: LayoutWatcher | null = null;
   private sessionScannerDispose: (() => void) | null = null;
+  private openclawScanner: OpenClawScanner | null = null;
   private initialized = false;
 
   /** Webview shim — broadcasts to all connected WS clients */
@@ -185,6 +190,10 @@ export class CliOrchestrator {
     const settings = readSettings();
     this.webview.postMessage({ type: 'settingsLoaded', soundEnabled: settings.soundEnabled });
 
+    // Tell the frontend which source mode we're in
+    const source = this.opts.source || 'claude';
+    this.webview.postMessage({ type: 'sourceMode', source });
+
     // Send layout
     const layout = readLayoutFromFile() || this.defaultLayout;
     if (layout) {
@@ -201,22 +210,40 @@ export class CliOrchestrator {
     // Send existing agents
     this.sendExistingAgents();
 
-    // Start session scanner (once)
-    if (!this.sessionScannerDispose) {
-      const scanner = startSessionScanner({
-        agents: this.agents,
-        nextAgentId: this.nextAgentId,
-        knownJsonlFiles: this.knownJsonlFiles,
-        fileWatchers: this.fileWatchers,
-        pollingTimers: this.pollingTimers,
-        waitingTimers: this.waitingTimers,
-        permissionTimers: this.permissionTimers,
-        webview: this.webview,
-        onAgentCreated: (agentId, folderName) => {
-          this.webview.postMessage({ type: 'agentCreated', id: agentId, folderName });
-        },
-      });
-      this.sessionScannerDispose = scanner.dispose;
+    // Start agent scanner (once)
+    if (source === 'openclaw') {
+      // OpenClaw mode: discover agents from ~/.openclaw/agents/
+      if (!this.openclawScanner) {
+        this.openclawScanner = new OpenClawScanner({
+          webview: this.webview,
+          onAgentCreated: (agentId, name) => {
+            console.log(`[CLI] OpenClaw agent created: ${name} (id=${agentId})`);
+          },
+        });
+        const managedAgents = this.openclawScanner.start();
+        // Sync scanner's agents into orchestrator's map for existingAgents resync
+        for (const [id, agent] of managedAgents) {
+          this.agents.set(id, agent as unknown as AgentState);
+        }
+      }
+    } else {
+      // Claude mode: scan ~/.claude/projects/ for sessions
+      if (!this.sessionScannerDispose) {
+        const scanner = startSessionScanner({
+          agents: this.agents,
+          nextAgentId: this.nextAgentId,
+          knownJsonlFiles: this.knownJsonlFiles,
+          fileWatchers: this.fileWatchers,
+          pollingTimers: this.pollingTimers,
+          waitingTimers: this.waitingTimers,
+          permissionTimers: this.permissionTimers,
+          webview: this.webview,
+          onAgentCreated: (agentId, folderName) => {
+            this.webview.postMessage({ type: 'agentCreated', id: agentId, folderName });
+          },
+        });
+        this.sessionScannerDispose = scanner.dispose;
+      }
     }
 
     this.initialized = true;
@@ -238,8 +265,23 @@ export class CliOrchestrator {
       folderNames,
     });
 
-    // Re-send current statuses
+    // Re-send current statuses and meta
     for (const [agentId, agent] of this.agents) {
+      // Re-announce agent creation
+      this.webview.postMessage({ type: 'agentCreated', id: agentId });
+
+      // Send meta if available (OpenClaw agents have projectName/teamName)
+      const meta = agent as Record<string, unknown>;
+      if (meta.projectName || meta.teamName || meta.model) {
+        this.webview.postMessage({
+          type: 'agentMeta',
+          id: agentId,
+          ...(meta.projectName ? { projectName: meta.projectName } : {}),
+          ...(meta.model ? { model: meta.model } : {}),
+          ...(meta.teamName ? { teamName: meta.teamName } : {}),
+        });
+      }
+
       for (const [toolId, status] of agent.activeToolStatuses) {
         this.webview.postMessage({
           type: 'agentToolStart',
@@ -263,6 +305,8 @@ export class CliOrchestrator {
     this.layoutWatcher = null;
     this.sessionScannerDispose?.();
     this.sessionScannerDispose = null;
+    this.openclawScanner?.dispose();
+    this.openclawScanner = null;
 
     for (const w of this.fileWatchers.values()) w.close();
     this.fileWatchers.clear();

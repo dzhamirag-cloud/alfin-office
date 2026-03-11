@@ -1,6 +1,8 @@
 import { useCallback, useRef, useState } from 'react';
 
+import { AgentListPanel } from './components/AgentListPanel.js';
 import { BottomToolbar } from './components/BottomToolbar.js';
+import { ContextMenu } from './components/ContextMenu.js';
 import { DebugView } from './components/DebugView.js';
 import { ZoomControls } from './components/ZoomControls.js';
 import { PULSE_ANIMATION_DURATION_SEC } from './constants.js';
@@ -137,11 +139,29 @@ function App() {
     layoutReady,
     loadedAssets,
     workspaceFolders,
+    sourceMode,
   } = useExtensionMessages(getOfficeState, editor.setLastSavedLayout, isEditDirty);
 
   const [isDebugMode, setIsDebugMode] = useState(false);
+  const [isAgentListOpen, setIsAgentListOpen] = useState(false);
+  const [contextMenu, setContextMenu] = useState<{
+    agentId: number;
+    x: number;
+    y: number;
+  } | null>(null);
 
   const handleToggleDebugMode = useCallback(() => setIsDebugMode((prev) => !prev), []);
+  const handleToggleAgentList = useCallback(() => setIsAgentListOpen((prev) => !prev), []);
+  const handleFollowAgent = useCallback((id: number) => {
+    const os = getOfficeState();
+    os.selectedAgentId = id;
+    os.cameraFollowId = id;
+  }, []);
+  // Context menu handler — available for future OfficeCanvas right-click integration
+  const _handleCanvasContextMenu = useCallback((agentId: number, x: number, y: number) => {
+    setContextMenu({ agentId, x, y });
+  }, []);
+  void _handleCanvasContextMenu; // suppress unused warning
 
   const handleSelectAgent = useCallback((id: number) => {
     vscode.postMessage({ type: 'focusAgent', id });
@@ -265,6 +285,9 @@ function App() {
         isDebugMode={isDebugMode}
         onToggleDebugMode={handleToggleDebugMode}
         workspaceFolders={workspaceFolders}
+        sourceMode={sourceMode}
+        isAgentListOpen={isAgentListOpen}
+        onToggleAgentList={handleToggleAgentList}
       />
 
       {editor.isEditMode && editor.isDirty && (
@@ -340,6 +363,50 @@ function App() {
           agentStatuses={agentStatuses}
           subagentTools={subagentTools}
           onSelectAgent={handleSelectAgent}
+        />
+      )}
+
+      {contextMenu &&
+        (() => {
+          const ch = officeState.characters.get(contextMenu.agentId);
+          const name = ch?.projectName || `Agent #${contextMenu.agentId}`;
+          return (
+            <ContextMenu
+              x={contextMenu.x}
+              y={contextMenu.y}
+              items={[
+                {
+                  label: `Follow ${name}`,
+                  onClick: () => {
+                    officeState.selectedAgentId = contextMenu.agentId;
+                    officeState.cameraFollowId = contextMenu.agentId;
+                  },
+                },
+                {
+                  label: 'Go to seat',
+                  onClick: () => officeState.sendToSeat(contextMenu.agentId),
+                },
+                {
+                  label: 'Stop agent',
+                  onClick: () => handleCloseAgent(contextMenu.agentId),
+                  danger: true,
+                },
+              ]}
+              onClose={() => setContextMenu(null)}
+            />
+          );
+        })()}
+
+      {isAgentListOpen && (
+        <AgentListPanel
+          officeState={officeState}
+          agents={agents}
+          agentStatuses={agentStatuses}
+          agentTools={agentTools}
+          subagentCharacters={subagentCharacters}
+          onFollowAgent={handleFollowAgent}
+          onStopAgent={handleCloseAgent}
+          onClose={() => setIsAgentListOpen(false)}
         />
       )}
     </div>

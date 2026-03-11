@@ -11,6 +11,9 @@ interface BottomToolbarProps {
   isDebugMode: boolean;
   onToggleDebugMode: () => void;
   workspaceFolders: WorkspaceFolder[];
+  sourceMode?: 'claude' | 'openclaw';
+  isAgentListOpen: boolean;
+  onToggleAgentList: () => void;
 }
 
 const panelStyle: React.CSSProperties = {
@@ -51,6 +54,9 @@ export function BottomToolbar({
   isDebugMode,
   onToggleDebugMode,
   workspaceFolders,
+  sourceMode,
+  isAgentListOpen,
+  onToggleAgentList,
 }: BottomToolbarProps) {
   const [hovered, setHovered] = useState<string | null>(null);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
@@ -96,7 +102,7 @@ export function BottomToolbar({
             opacity: 0.6,
           }}
         >
-          Run 'claude' in a terminal
+          {sourceMode === 'openclaw' ? '🤖 OpenClaw Agents' : "Run 'claude' in a terminal"}
         </span>
       ) : (
         <div ref={folderPickerRef} style={{ position: 'relative' }}>
@@ -174,6 +180,22 @@ export function BottomToolbar({
         title="Edit office layout"
       >
         Layout
+      </button>
+      <button
+        onClick={onToggleAgentList}
+        onMouseEnter={() => setHovered('agents')}
+        onMouseLeave={() => setHovered(null)}
+        style={
+          isAgentListOpen
+            ? { ...btnActive }
+            : {
+                ...btnBase,
+                background: hovered === 'agents' ? 'var(--pixel-btn-hover-bg)' : btnBase.background,
+              }
+        }
+        title="Agent list"
+      >
+        Agents
       </button>
       <div style={{ position: 'relative' }}>
         <button

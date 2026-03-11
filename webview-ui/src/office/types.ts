@@ -195,4 +195,10 @@ export interface Character {
   matrixEffectSeeds: number[];
   /** Workspace folder name (only set for multi-root workspaces) */
   folderName?: string;
+  /** Display name (from OpenClaw agent config or folder name) */
+  projectName?: string;
+  /** Team / department name */
+  teamName?: string;
+  /** Model short name (opus, sonnet, etc.) */
+  model?: string;
 }
