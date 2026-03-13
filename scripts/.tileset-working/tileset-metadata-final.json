@@ -28,7 +28,7 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 3,
-      "footprintH": 1,
+      "footprintH": 2,
       "backgroundTiles": 1
     },
     {
@@ -51,7 +51,7 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 3,
-      "footprintH": 1,
+      "footprintH": 2,
       "backgroundTiles": 1
     },
     {
@@ -175,7 +175,7 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 3,
-      "footprintH": 1,
+      "footprintH": 2,
       "backgroundTiles": 1
     },
     {
@@ -384,7 +384,7 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 1,
+      "footprintH": 2,
       "backgroundTiles": 1
     },
     {
@@ -432,7 +432,7 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 1,
+      "footprintH": 2,
       "backgroundTiles": 1
     },
     {
@@ -456,7 +456,7 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 1,
+      "footprintH": 2,
       "backgroundTiles": 1
     },
     {
