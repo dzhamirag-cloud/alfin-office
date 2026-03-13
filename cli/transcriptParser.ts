@@ -180,7 +180,12 @@ export function processTranscriptLine(
   try {
     const record = JSON.parse(line);
 
-    if (record.type === 'assistant' && Array.isArray(record.message?.content)) {
+    // Support both old format (type='assistant') and new OpenClaw format (type='message', role='assistant')
+    const role = record.type === 'message' ? record.message?.role : record.type;
+    const isAssistant = role === 'assistant';
+    const isUser = role === 'user' || role === 'toolResult';
+
+    if (isAssistant && Array.isArray(record.message?.content)) {
       // Extract model
       const rawModel = record.message?.model as string | undefined;
       if (rawModel) {
@@ -197,7 +202,7 @@ export function processTranscriptLine(
         name?: string;
         input?: Record<string, unknown>;
       }>;
-      const hasToolUse = blocks.some((b) => b.type === 'tool_use');
+      const hasToolUse = blocks.some((b) => b.type === 'tool_use' || b.type === 'toolCall');
 
       if (hasToolUse) {
         cancelWaitingTimer(agentId);
@@ -207,9 +212,12 @@ export function processTranscriptLine(
 
         let hasNonExemptTool = false;
         for (const block of blocks) {
-          if (block.type === 'tool_use' && block.id) {
+          if ((block.type === 'tool_use' || block.type === 'toolCall') && block.id) {
             const toolName = block.name || '';
-            const status = formatToolStatus(toolName, block.input || {});
+            const status = formatToolStatus(
+              toolName,
+              (block.input || block.arguments || {}) as Record<string, unknown>,
+            );
             agent.activeToolIds.add(block.id);
             agent.activeToolStatuses.set(block.id, status);
             agent.activeToolNames.set(block.id, toolName);
@@ -230,14 +238,32 @@ export function processTranscriptLine(
       } else if (blocks.some((b) => b.type === 'text') && !agent.hadToolsInTurn) {
         startWaitingTimer(agentId, agents, sink);
       }
-    } else if (record.type === 'user') {
+    } else if (isUser) {
       const content = record.message?.content;
-      if (Array.isArray(content)) {
+
+      // Handle OpenClaw format: role='toolResult' with toolCallId at message level
+      if (role === 'toolResult' && record.message?.toolCallId) {
+        const toolId = record.message.toolCallId as string;
+        agent.activeToolIds.delete(toolId);
+        agent.activeToolStatuses.delete(toolId);
+        agent.activeToolNames.delete(toolId);
+        setTimeout(() => {
+          sink?.postMessage({ type: 'agentToolDone', id: agentId, toolId });
+        }, TOOL_DONE_DELAY_MS);
+        if (agent.activeToolIds.size === 0) {
+          agent.hadToolsInTurn = false;
+        }
+      } else if (Array.isArray(content)) {
         const blocks = content as Array<{ type: string; tool_use_id?: string }>;
-        const hasToolResult = blocks.some((b) => b.type === 'tool_result');
+        const hasToolResult = blocks.some(
+          (b) => b.type === 'tool_result' || b.type === 'toolResult',
+        );
         if (hasToolResult) {
           for (const block of blocks) {
-            if (block.type === 'tool_result' && block.tool_use_id) {
+            if (
+              (block.type === 'tool_result' || block.type === 'toolResult') &&
+              block.tool_use_id
+            ) {
               const toolId = block.tool_use_id;
               agent.activeToolIds.delete(toolId);
               agent.activeToolStatuses.delete(toolId);

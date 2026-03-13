@@ -19,6 +19,26 @@ export interface AgentDef {
 
 const OPENCLAW_BASE = path.join(os.homedir(), '.openclaw');
 
+/** Human-readable display names for agents */
+const AGENT_DISPLAY_NAMES: Record<string, string> = {
+  main: 'Кайро',
+  techlead: 'Текна',
+  backend: 'Бэк',
+  frontend: 'Фронт',
+  devops: 'Деплой',
+  designer: 'Пиксель',
+  pm: 'Продо',
+  marketer: 'Марк',
+  targetolog: 'Таргет',
+  smm: 'Соц',
+  copywriter: 'Перо',
+  brandman: 'Бренд',
+  content: 'Контент',
+  cfo: 'Фин',
+  strategist: 'Прайм',
+  'claude-code': 'Claude Code',
+};
+
 /**
  * Discover agents from ~/.openclaw/agents/ directory.
  * Reads each agent's config to extract name/description if available.
@@ -43,8 +63,8 @@ export function discoverAgents(): AgentDef[] {
         continue;
       }
 
-      // Try to read agent config for name/description
-      let name = dirName;
+      // Use display name from mapping, then try config.yaml, then fallback to dir name
+      let name = AGENT_DISPLAY_NAMES[dirName] ?? dirName;
       let department = 'General';
       const configPath = path.join(dirPath, 'config.yaml');
       if (fs.existsSync(configPath)) {
@@ -52,7 +72,7 @@ export function discoverAgents(): AgentDef[] {
           const content = fs.readFileSync(configPath, 'utf-8');
           // Simple YAML parsing for name/description
           const nameMatch = content.match(/^name:\s*["']?(.+?)["']?\s*$/m);
-          if (nameMatch) name = nameMatch[1];
+          if (nameMatch && !AGENT_DISPLAY_NAMES[dirName]) name = nameMatch[1];
           const descMatch = content.match(/^description:\s*["']?(.+?)["']?\s*$/m);
           if (descMatch) department = descMatch[1];
         } catch {

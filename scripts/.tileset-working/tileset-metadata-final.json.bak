@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-03-10T13:26:59.342Z",
+  "timestamp": "2026-03-12T12:06:33.250770+00:00",
   "sourceFile": "./webview-ui/public/assets/office_tileset_16x16.png",
   "tileset": {
     "width": 256,
@@ -28,7 +28,7 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 3,
-      "footprintH": 2,
+      "footprintH": 1,
       "backgroundTiles": 1
     },
     {
@@ -51,7 +51,7 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 3,
-      "footprintH": 2,
+      "footprintH": 1,
       "backgroundTiles": 1
     },
     {
@@ -102,7 +102,8 @@
       "name": "SHELF_WALL_WOOD_SM",
       "label": "Small Wooden Wall Shelf",
       "footprintW": 3,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_4_0_1",
@@ -119,7 +120,8 @@
       "name": "SHELF_WALL_SM",
       "label": "Small Wall Shelf",
       "footprintW": 3,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_3",
@@ -173,7 +175,7 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 3,
-      "footprintH": 2,
+      "footprintH": 1,
       "backgroundTiles": 1
     },
     {
@@ -309,7 +311,8 @@
       "name": "SHELF_WALL_SM",
       "label": "Small Wall Shelf",
       "footprintW": 3,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_7_0_3",
@@ -326,7 +329,8 @@
       "name": "SHELF_WALL_SM",
       "label": "Small Wall Shelf",
       "footprintW": 3,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_8",
@@ -380,7 +384,7 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 2,
+      "footprintH": 1,
       "backgroundTiles": 1
     },
     {
@@ -404,7 +408,8 @@
       "footprintW": 2,
       "footprintH": 1,
       "partOfGroup": false,
-      "groupId": null
+      "groupId": null,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_11_0_0_1_0",
@@ -427,7 +432,7 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 2,
+      "footprintH": 1,
       "backgroundTiles": 1
     },
     {
@@ -451,7 +456,7 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 2,
+      "footprintH": 1,
       "backgroundTiles": 1
     },
     {
@@ -657,7 +662,8 @@
       "name": "SHELF_WALL_SM",
       "label": "Small Wall Shelf",
       "footprintW": 3,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_12",
@@ -676,7 +682,7 @@
       "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 2,
       "footprintH": 1
@@ -698,7 +704,7 @@
       "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 2,
       "footprintH": 1
@@ -720,7 +726,7 @@
       "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 1,
       "footprintH": 1
@@ -742,7 +748,7 @@
       "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 1,
       "footprintH": 1
@@ -754,7 +760,7 @@
       "width": 20,
       "height": 25,
       "paddedX": 176,
-      "paddedY": 88,
+      "paddedY": 95,
       "paddedWidth": 32,
       "paddedHeight": 32,
       "name": "BOOKSHELF_WOOD_SM",
@@ -764,10 +770,11 @@
       "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 1
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_18",
@@ -776,7 +783,7 @@
       "width": 20,
       "height": 25,
       "paddedX": 208,
-      "paddedY": 88,
+      "paddedY": 95,
       "paddedWidth": 32,
       "paddedHeight": 32,
       "name": "BOOKSHELF_WOOD_SM",
@@ -786,10 +793,11 @@
       "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 1
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_20",
@@ -808,7 +816,7 @@
       "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 3,
       "footprintH": 1
@@ -830,7 +838,7 @@
       "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 1,
       "footprintH": 1
@@ -852,7 +860,7 @@
       "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 3,
       "footprintH": 1
@@ -874,7 +882,7 @@
       "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 1,
       "footprintH": 1
@@ -896,10 +904,11 @@
       "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 3,
-      "footprintH": 1
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_23",
@@ -908,9 +917,9 @@
       "width": 30,
       "height": 30,
       "paddedX": 176,
-      "paddedY": 136,
+      "paddedY": 126,
       "paddedWidth": 32,
-      "paddedHeight": 32,
+      "paddedHeight": 48,
       "name": "BOOKSHELF_WOOD_SM",
       "label": "Small Wooden Bookshelf",
       "category": "storage",
@@ -918,10 +927,11 @@
       "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 1
+      "footprintH": 1,
+      "backgroundTiles": 2
     },
     {
       "id": "ASSET_24",
@@ -930,9 +940,9 @@
       "width": 30,
       "height": 30,
       "paddedX": 208,
-      "paddedY": 136,
+      "paddedY": 126,
       "paddedWidth": 32,
-      "paddedHeight": 32,
+      "paddedHeight": 48,
       "name": "BOOKSHELF_TALL",
       "label": "Tall Bookshelf",
       "category": "storage",
@@ -940,10 +950,11 @@
       "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 1
+      "footprintH": 1,
+      "backgroundTiles": 2
     },
     {
       "id": "ASSET_26",
@@ -965,7 +976,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_27_0_0_0_0",
@@ -982,7 +994,8 @@
       "name": "BOARD_CORK_SM",
       "label": "Small Cork Board",
       "footprintW": 2,
-      "footprintH": 3
+      "footprintH": 1,
+      "backgroundTiles": 2
     },
     {
       "id": "ASSET_27_0_0_0_1",
@@ -999,7 +1012,8 @@
       "name": "WHITEBOARD_WALL_SM",
       "label": "Small Wall Whiteboard",
       "footprintW": 2,
-      "footprintH": 3
+      "footprintH": 1,
+      "backgroundTiles": 2
     },
     {
       "id": "ASSET_27_0_0_0_2",
@@ -1016,7 +1030,8 @@
       "name": "WALL_PANEL_BLUE_SM",
       "label": "Small Blue Wall Panel",
       "footprintW": 2,
-      "footprintH": 3
+      "footprintH": 1,
+      "backgroundTiles": 2
     },
     {
       "id": "ASSET_27_0_0_0_3",
@@ -1033,7 +1048,8 @@
       "name": "RUG_RECTANGULAR_GOLD",
       "label": "Gold Rectangular Rug",
       "footprintW": 2,
-      "footprintH": 3
+      "footprintH": 1,
+      "backgroundTiles": 2
     },
     {
       "id": "ASSET_27_0_0_1_0",
@@ -1050,7 +1066,8 @@
       "name": "WALL_PANEL_BLUE_SM",
       "label": "Small Blue Wall Panel",
       "footprintW": 2,
-      "footprintH": 3
+      "footprintH": 1,
+      "backgroundTiles": 2
     },
     {
       "id": "ASSET_27_0_0_1_1",
@@ -1067,7 +1084,8 @@
       "name": "BOARD_CORK_SM",
       "label": "Small Cork Board",
       "footprintW": 2,
-      "footprintH": 3
+      "footprintH": 1,
+      "backgroundTiles": 2
     },
     {
       "id": "ASSET_27_0_0_1_2",
@@ -1084,7 +1102,8 @@
       "name": "FRAME_WOOD_SM",
       "label": "Small Wooden Frame",
       "footprintW": 2,
-      "footprintH": 3
+      "footprintH": 1,
+      "backgroundTiles": 2
     },
     {
       "id": "ASSET_27_0_0_1_3",
@@ -1101,7 +1120,8 @@
       "name": "PAPER_SHEET_BLANK",
       "label": "Blank Paper Sheet",
       "footprintW": 2,
-      "footprintH": 3
+      "footprintH": 1,
+      "backgroundTiles": 2
     },
     {
       "id": "ASSET_27_0_1_0_0_0_0",
@@ -1110,9 +1130,9 @@
       "width": 224,
       "height": 96,
       "paddedX": 128,
-      "paddedY": 184,
+      "paddedY": 175,
       "paddedWidth": 16,
-      "paddedHeight": 32,
+      "paddedHeight": 48,
       "splitMarker": true,
       "name": "BOOKSHELF_TALL",
       "label": "Tall Bookshelf",
@@ -1121,10 +1141,11 @@
       "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 1
+      "footprintH": 1,
+      "backgroundTiles": 2
     },
     {
       "id": "ASSET_27_0_1_0_0_0_1",
@@ -1133,9 +1154,9 @@
       "width": 224,
       "height": 96,
       "paddedX": 144,
-      "paddedY": 184,
+      "paddedY": 175,
       "paddedWidth": 16,
-      "paddedHeight": 32,
+      "paddedHeight": 48,
       "splitMarker": true,
       "name": "VENDING_MACHINE_DRINK",
       "label": "Drink Vending Machine",
@@ -1144,10 +1165,11 @@
       "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 1
+      "footprintH": 1,
+      "backgroundTiles": 2
     },
     {
       "id": "ASSET_27_0_1_0_0_0_2",
@@ -1156,9 +1178,9 @@
       "width": 224,
       "height": 96,
       "paddedX": 160,
-      "paddedY": 184,
+      "paddedY": 176,
       "paddedWidth": 16,
-      "paddedHeight": 32,
+      "paddedHeight": 48,
       "splitMarker": true,
       "name": "BOOKSHELF_TALL",
       "label": "Tall Bookshelf",
@@ -1167,10 +1189,11 @@
       "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 1
+      "footprintH": 1,
+      "backgroundTiles": 2
     },
     {
       "id": "ASSET_27_0_1_0_0_0_3",
@@ -1179,9 +1202,9 @@
       "width": 224,
       "height": 96,
       "paddedX": 176,
-      "paddedY": 184,
+      "paddedY": 176,
       "paddedWidth": 16,
-      "paddedHeight": 32,
+      "paddedHeight": 48,
       "splitMarker": true,
       "name": "BOOKSHELF_TALL",
       "label": "Tall Bookshelf",
@@ -1190,10 +1213,11 @@
       "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 1
+      "footprintH": 1,
+      "backgroundTiles": 2
     },
     {
       "id": "ASSET_27_0_1_0_0_0_4",
@@ -1202,9 +1226,9 @@
       "width": 224,
       "height": 96,
       "paddedX": 192,
-      "paddedY": 184,
+      "paddedY": 175,
       "paddedWidth": 32,
-      "paddedHeight": 32,
+      "paddedHeight": 48,
       "splitMarker": true,
       "name": "BOOKSHELF_METAL_SM",
       "label": "Small Metal Bookshelf",
@@ -1213,10 +1237,11 @@
       "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 1
+      "footprintH": 1,
+      "backgroundTiles": 2
     },
     {
       "id": "ASSET_27_0_1_1_0_0_0",
@@ -1239,7 +1264,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_27_0_1_1_0_0_1",
@@ -1262,7 +1288,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_27_0_1_1_0_0_2",
@@ -1285,7 +1312,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_27_0_1_1_0_0_3",
@@ -1308,7 +1336,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_27_0_1_1_0_0_4",
@@ -1331,7 +1360,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_27_0_1_1_0_0_5",
@@ -1354,7 +1384,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_28",
@@ -1363,9 +1394,9 @@
       "width": 29,
       "height": 31,
       "paddedX": 192,
-      "paddedY": 184,
+      "paddedY": 175,
       "paddedWidth": 32,
-      "paddedHeight": 32,
+      "paddedHeight": 48,
       "name": "BOOKSHELF_METAL_SM",
       "label": "Small Metal Bookshelf",
       "category": "storage",
@@ -1373,10 +1404,11 @@
       "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 1
+      "footprintH": 1,
+      "backgroundTiles": 2
     },
     {
       "id": "ASSET_29",
@@ -1385,9 +1417,9 @@
       "width": 29,
       "height": 31,
       "paddedX": 224,
-      "paddedY": 184,
+      "paddedY": 175,
       "paddedWidth": 32,
-      "paddedHeight": 32,
+      "paddedHeight": 48,
       "name": "BOOKSHELF_TALL",
       "label": "Tall Bookshelf",
       "category": "storage",
@@ -1395,10 +1427,11 @@
       "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 1
+      "footprintH": 1,
+      "backgroundTiles": 2
     },
     {
       "id": "ASSET_30",
@@ -1420,7 +1453,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_31",
@@ -1442,7 +1476,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_32",
@@ -1640,7 +1675,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 1
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_43",
@@ -1662,7 +1698,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 1
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_41_0_0",
@@ -1671,9 +1708,9 @@
       "width": 32,
       "height": 31,
       "paddedX": 192,
-      "paddedY": 264,
+      "paddedY": 259,
       "paddedWidth": 16,
-      "paddedHeight": 32,
+      "paddedHeight": 48,
       "splitMarker": true,
       "name": "FILING_CABINET_SM",
       "label": "Small Filing Cabinet",
@@ -1685,7 +1722,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 1
+      "footprintH": 1,
+      "backgroundTiles": 2
     },
     {
       "id": "ASSET_41_0_1",
@@ -1694,9 +1732,9 @@
       "width": 32,
       "height": 31,
       "paddedX": 208,
-      "paddedY": 264,
+      "paddedY": 259,
       "paddedWidth": 16,
-      "paddedHeight": 32,
+      "paddedHeight": 48,
       "splitMarker": true,
       "name": "FILING_CABINET_SM",
       "label": "Small Filing Cabinet",
@@ -1708,7 +1746,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 1
+      "footprintH": 1,
+      "backgroundTiles": 2
     },
     {
       "id": "ASSET_40",
@@ -1717,9 +1756,9 @@
       "width": 23,
       "height": 32,
       "paddedX": 225,
-      "paddedY": 264,
+      "paddedY": 258,
       "paddedWidth": 32,
-      "paddedHeight": 32,
+      "paddedHeight": 48,
       "name": "VENDING_MACHINE_RED",
       "label": "Red Vending Machine",
       "category": "electronics",
@@ -1730,7 +1769,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 1
+      "footprintH": 1,
+      "backgroundTiles": 2
     },
     {
       "id": "ASSET_46",
@@ -1749,10 +1789,11 @@
       "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_47",
@@ -1771,10 +1812,11 @@
       "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_48",
@@ -1793,10 +1835,11 @@
       "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_49",
@@ -1930,7 +1973,8 @@
       "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 1
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_55",
@@ -1952,7 +1996,8 @@
       "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 1
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_61",
@@ -1996,7 +2041,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_64",
@@ -2018,7 +2064,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_65",
@@ -2040,7 +2087,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_62",
@@ -2210,7 +2258,8 @@
       "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 1
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_79",
@@ -2232,7 +2281,8 @@
       "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 1
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_83",
@@ -2254,7 +2304,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_84",
@@ -2276,7 +2327,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_85",
@@ -2298,7 +2350,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_86",
@@ -2320,7 +2373,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_87",
@@ -2342,7 +2396,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_74",
@@ -2364,7 +2419,8 @@
       "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 1
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_76",
@@ -2386,7 +2442,8 @@
       "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 1
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_80",
@@ -2408,7 +2465,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_81",
@@ -2430,7 +2488,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_82",
@@ -2452,7 +2511,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_98",
@@ -2628,7 +2688,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_102",
@@ -2650,7 +2711,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_103",
@@ -2672,7 +2734,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_104",
@@ -2694,7 +2757,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_105",
@@ -2716,7 +2780,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_106",
@@ -2738,7 +2803,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_111",
@@ -2804,7 +2870,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_118",
@@ -2826,7 +2893,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_119",
@@ -2848,7 +2916,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_116",
@@ -2892,7 +2961,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_124",
@@ -2914,7 +2984,8 @@
       "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 3,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_125",
@@ -2977,7 +3048,7 @@
       "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 1,
       "footprintH": 1
@@ -3048,7 +3119,8 @@
       "canPlaceOnSurfaces": false,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_128",
@@ -3152,13 +3224,14 @@
       "label": "Small Wooden Cabinet",
       "category": "storage",
       "isDesk": false,
-      "canPlaceOnWalls": true,
+      "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_135",
@@ -3174,13 +3247,14 @@
       "label": "Small Wooden Bookshelf",
       "category": "storage",
       "isDesk": false,
-      "canPlaceOnWalls": true,
+      "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 1,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_136",
@@ -3196,13 +3270,14 @@
       "label": "Small Wooden Bookshelf",
       "category": "storage",
       "isDesk": false,
-      "canPlaceOnWalls": true,
+      "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_137",
@@ -3218,13 +3293,14 @@
       "label": "Small Wooden Bookshelf",
       "category": "storage",
       "isDesk": false,
-      "canPlaceOnWalls": true,
+      "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_139",
@@ -3240,13 +3316,14 @@
       "label": "Stacked Cardboard Boxes",
       "category": "storage",
       "isDesk": false,
-      "canPlaceOnWalls": true,
+      "canPlaceOnWalls": false,
       "partOfGroup": false,
       "groupId": null,
-      "canPlaceOnSurfaces": false,
+      "canPlaceOnSurfaces": true,
       "discard": false,
       "footprintW": 2,
-      "footprintH": 2
+      "footprintH": 1,
+      "backgroundTiles": 1
     },
     {
       "id": "ASSET_132_0_0",
