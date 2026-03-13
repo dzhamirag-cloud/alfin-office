@@ -10,6 +10,7 @@ import { useEditorActions } from './hooks/useEditorActions.js';
 import { useEditorKeyboard } from './hooks/useEditorKeyboard.js';
 import { useExtensionMessages } from './hooks/useExtensionMessages.js';
 import { OfficeCanvas } from './office/components/OfficeCanvas.js';
+import { ActiveBubbles } from './office/components/ActiveBubbles.js';
 import { ToolOverlay } from './office/components/ToolOverlay.js';
 import { EditorState } from './office/editor/editorState.js';
 import { EditorToolbar } from './office/editor/EditorToolbar.js';
@@ -343,6 +344,15 @@ function App() {
             />
           );
         })()}
+
+      <ActiveBubbles
+        officeState={officeState}
+        agents={agents}
+        agentTools={agentTools}
+        containerRef={containerRef}
+        zoom={editor.zoom}
+        panRef={editor.panRef}
+      />
 
       <ToolOverlay
         officeState={officeState}
