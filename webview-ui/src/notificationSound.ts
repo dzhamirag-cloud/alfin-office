@@ -1,14 +1,7 @@
-import {
-  NOTIFICATION_NOTE_1_HZ,
-  NOTIFICATION_NOTE_1_START_SEC,
-  NOTIFICATION_NOTE_2_HZ,
-  NOTIFICATION_NOTE_2_START_SEC,
-  NOTIFICATION_NOTE_DURATION_SEC,
-  NOTIFICATION_VOLUME,
-} from './constants.js';
-
 let soundEnabled = true;
 let audioCtx: AudioContext | null = null;
+let bongBuffer: AudioBuffer | null = null;
+let bufferLoading = false;
 
 export function setSoundEnabled(enabled: boolean): void {
   soundEnabled = enabled;
@@ -18,22 +11,24 @@ export function isSoundEnabled(): boolean {
   return soundEnabled;
 }
 
-function playNote(ctx: AudioContext, freq: number, startOffset: number): void {
-  const t = ctx.currentTime + startOffset;
-  const osc = ctx.createOscillator();
-  const gain = ctx.createGain();
+async function ensureBuffer(): Promise<AudioBuffer | null> {
+  if (bongBuffer) return bongBuffer;
+  if (bufferLoading) return null;
+  bufferLoading = true;
 
-  osc.type = 'sine';
-  osc.frequency.setValueAtTime(freq, t);
-
-  gain.gain.setValueAtTime(NOTIFICATION_VOLUME, t);
-  gain.gain.exponentialRampToValueAtTime(0.001, t + NOTIFICATION_NOTE_DURATION_SEC);
-
-  osc.connect(gain);
-  gain.connect(ctx.destination);
-
-  osc.start(t);
-  osc.stop(t + NOTIFICATION_NOTE_DURATION_SEC);
+  try {
+    if (!audioCtx) {
+      audioCtx = new AudioContext();
+    }
+    // Load the taco bell bong WAV
+    const resp = await fetch('assets/taco-bell-bong.wav');
+    const arrayBuf = await resp.arrayBuffer();
+    bongBuffer = await audioCtx.decodeAudioData(arrayBuf);
+    return bongBuffer;
+  } catch {
+    bufferLoading = false;
+    return null;
+  }
 }
 
 export async function playDoneSound(): Promise<void> {
@@ -42,13 +37,22 @@ export async function playDoneSound(): Promise<void> {
     if (!audioCtx) {
       audioCtx = new AudioContext();
     }
-    // Resume suspended context (webviews suspend until user gesture)
     if (audioCtx.state === 'suspended') {
       await audioCtx.resume();
     }
-    // Ascending two-note chime: E5 → B5
-    playNote(audioCtx, NOTIFICATION_NOTE_1_HZ, NOTIFICATION_NOTE_1_START_SEC);
-    playNote(audioCtx, NOTIFICATION_NOTE_2_HZ, NOTIFICATION_NOTE_2_START_SEC);
+
+    const buffer = await ensureBuffer();
+    if (!buffer) return;
+
+    const source = audioCtx.createBufferSource();
+    source.buffer = buffer;
+
+    const gain = audioCtx.createGain();
+    gain.gain.value = 0.5;
+
+    source.connect(gain);
+    gain.connect(audioCtx.destination);
+    source.start(0);
   } catch {
     // Audio may not be available
   }
@@ -63,6 +67,8 @@ export function unlockAudio(): void {
     if (audioCtx.state === 'suspended') {
       audioCtx.resume();
     }
+    // Pre-load the buffer
+    ensureBuffer();
   } catch {
     // ignore
   }

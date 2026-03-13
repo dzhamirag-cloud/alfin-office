@@ -161,6 +161,9 @@ export function canPlaceFurniture(
       const tileVal = layout.tiles[idx];
       if (entry.canPlaceOnWalls) {
         if (tileVal !== TileType.WALL) return false;
+      } else if (entry.canPlaceOnSurfaces) {
+        // Surface items (e.g. decorative plants) can go on floors, walls, anywhere
+        if (tileVal === TileType.VOID) return false;
       } else {
         if (tileVal === TileType.VOID) return false; // Cannot place on VOID
         if (tileVal === TileType.WALL) return false; // Normal items cannot overlap walls

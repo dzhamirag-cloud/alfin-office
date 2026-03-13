@@ -170,14 +170,29 @@ export function ToolOverlay({
                 />
               )}
               <div style={{ overflow: 'hidden' }}>
+                {ch.projectName && (
+                  <span
+                    style={{
+                      fontSize: '26px',
+                      color: '#e2e8f0',
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                      display: 'block',
+                      imageRendering: 'pixelated',
+                    }}
+                  >
+                    {ch.projectName}
+                  </span>
+                )}
                 <span
                   style={{
-                    fontSize: isSub ? '20px' : '22px',
+                    fontSize: isSub ? '22px' : '24px',
                     fontStyle: isSub ? 'italic' : undefined,
-                    color: 'var(--vscode-foreground)',
+                    color: '#94a3b8',
                     overflow: 'hidden',
                     textOverflow: 'ellipsis',
                     display: 'block',
+                    imageRendering: 'pixelated',
                   }}
                 >
                   {activityText}

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "timestamp": "2026-02-09T18:37:03.833Z",
-  "sourceFile": "assets/office_tileset_16x16.png",
+  "timestamp": "2026-03-09T17:32:43.857Z",
+  "sourceFile": "./webview-ui/public/assets/office_tileset_16x16.png",
   "tileset": {
     "width": 256,
     "height": 512
@@ -11,7 +11,7 @@
     {
       "id": "ASSET_0",
       "paddedX": 16,
-      "paddedY": -10,
+      "paddedY": 0,
       "paddedWidth": 48,
       "paddedHeight": 32,
       "name": "DRESSER_WOOD_SM",
@@ -26,11 +26,11 @@
     {
       "id": "ASSET_1",
       "paddedX": 64,
-      "paddedY": -10,
+      "paddedY": 0,
       "paddedWidth": 48,
       "paddedHeight": 32,
-      "name": "CABINET_WOOD_SM",
-      "label": "Small Wooden Cabinet",
+      "name": "CREDENZA_WOOD_SM",
+      "label": "Small Wooden Credenza",
       "category": "storage",
       "footprintW": 3,
       "footprintH": 2,
@@ -39,7 +39,37 @@
       "discard": false
     },
     {
-      "id": "ASSET_4",
+      "id": "ASSET_2",
+      "paddedX": 112,
+      "paddedY": 0,
+      "paddedWidth": 16,
+      "paddedHeight": 16,
+      "name": "BOOKSHELF_WALL_SM",
+      "label": "Small Wall Bookshelf",
+      "category": "storage",
+      "footprintW": 1,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_4_0_0_0_0",
+      "paddedX": 112,
+      "paddedY": 16,
+      "paddedWidth": 16,
+      "paddedHeight": 16,
+      "name": "BOOKSHELF_WALL_SM",
+      "label": "Small Wall Bookshelf",
+      "category": "storage",
+      "footprintW": 1,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_4_0_0_0_1",
       "paddedX": 128,
       "paddedY": 0,
       "paddedWidth": 48,
@@ -50,7 +80,52 @@
       "footprintW": 3,
       "footprintH": 2,
       "isDesk": false,
-      "canPlaceOnWalls": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_4_0_1",
+      "paddedX": 176,
+      "paddedY": 0,
+      "paddedWidth": 48,
+      "paddedHeight": 32,
+      "name": "SHELF_WALL_SM",
+      "label": "Small Wall Shelf",
+      "category": "storage",
+      "footprintW": 3,
+      "footprintH": 2,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_3",
+      "paddedX": 224,
+      "paddedY": 0,
+      "paddedWidth": 32,
+      "paddedHeight": 16,
+      "name": "SHELF_WALL_WOOD_SM",
+      "label": "Small Wooden Wall Shelf",
+      "category": "storage",
+      "footprintW": 2,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_5",
+      "paddedX": 224,
+      "paddedY": 16,
+      "paddedWidth": 32,
+      "paddedHeight": 16,
+      "name": "SHELF_WALL_WOOD_SM",
+      "label": "Small Wooden Wall Shelf",
+      "category": "storage",
+      "footprintW": 2,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
       "discard": false
     },
     {
@@ -59,19 +134,49 @@
       "paddedY": 22,
       "paddedWidth": 48,
       "paddedHeight": 32,
-      "name": "CREDENZA_MODERN_LG",
-      "label": "Modern Credenza Large",
-      "category": "wall",
+      "name": "CREDENZA_BLUE_SM",
+      "label": "Small Blue Credenza",
+      "category": "storage",
       "footprintW": 3,
       "footprintH": 2,
+      "isDesk": false,
+      "canPlaceOnWalls": false,
+      "discard": false
+    },
+    {
+      "id": "ASSET_7_0_0_0_0",
+      "paddedX": 48,
+      "paddedY": 32,
+      "paddedWidth": 32,
+      "paddedHeight": 16,
+      "name": "SHELF_WALL_SM",
+      "label": "Small Wall Shelf",
+      "category": "storage",
+      "footprintW": 2,
+      "footprintH": 1,
       "isDesk": false,
       "canPlaceOnWalls": true,
       "discard": false
     },
     {
-      "id": "ASSET_7",
+      "id": "ASSET_7_0_0_1_0",
+      "paddedX": 48,
+      "paddedY": 48,
+      "paddedWidth": 32,
+      "paddedHeight": 16,
+      "name": "SHELF_WALL_SM",
+      "label": "Small Wall Shelf",
+      "category": "storage",
+      "footprintW": 2,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_7_0_1_0_0",
       "paddedX": 80,
-      "paddedY": 22,
+      "paddedY": 32,
       "paddedWidth": 32,
       "paddedHeight": 32,
       "name": "DESK_WOOD_SM",
@@ -84,13 +189,88 @@
       "discard": false
     },
     {
+      "id": "ASSET_7_0_1_0_1",
+      "paddedX": 112,
+      "paddedY": 32,
+      "paddedWidth": 16,
+      "paddedHeight": 32,
+      "name": "SHELF_WALL_BOOKS_SM",
+      "label": "Small Wall Bookshelf",
+      "category": "storage",
+      "footprintW": 1,
+      "footprintH": 2,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_7_0_2",
+      "paddedX": 128,
+      "paddedY": 32,
+      "paddedWidth": 48,
+      "paddedHeight": 32,
+      "name": "SHELF_WALL_SM",
+      "label": "Small Wall Shelf",
+      "category": "storage",
+      "footprintW": 3,
+      "footprintH": 2,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_7_0_3",
+      "paddedX": 176,
+      "paddedY": 32,
+      "paddedWidth": 48,
+      "paddedHeight": 32,
+      "name": "SHELF_WALL_SM",
+      "label": "Small Wall Shelf",
+      "category": "storage",
+      "footprintW": 3,
+      "footprintH": 2,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_8",
+      "paddedX": 224,
+      "paddedY": 32,
+      "paddedWidth": 32,
+      "paddedHeight": 16,
+      "name": "SHELF_WALL_SM",
+      "label": "Small Wall Shelf",
+      "category": "storage",
+      "footprintW": 2,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_9",
+      "paddedX": 224,
+      "paddedY": 48,
+      "paddedWidth": 32,
+      "paddedHeight": 16,
+      "name": "KEYBOARD_STANDARD",
+      "label": "Standard Keyboard",
+      "category": "electronics",
+      "footprintW": 2,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": false,
+      "discard": false
+    },
+    {
       "id": "ASSET_10",
       "paddedX": 0,
       "paddedY": 54,
       "paddedWidth": 32,
       "paddedHeight": 32,
       "name": "DRESSER_WOOD_SM",
-      "label": "Small Wood Dresser",
+      "label": "Small Wooden Dresser",
       "category": "storage",
       "footprintW": 2,
       "footprintH": 2,
@@ -99,7 +279,22 @@
       "discard": false
     },
     {
-      "id": "ASSET_11",
+      "id": "ASSET_11_0_0_0_0",
+      "paddedX": 0,
+      "paddedY": 54,
+      "paddedWidth": 32,
+      "paddedHeight": 32,
+      "name": "DRESSER_WOOD_SM",
+      "label": "Small Wooden Dresser",
+      "category": "storage",
+      "footprintW": 2,
+      "footprintH": 2,
+      "isDesk": false,
+      "canPlaceOnWalls": false,
+      "discard": false
+    },
+    {
+      "id": "ASSET_11_0_0_1_0",
       "paddedX": 0,
       "paddedY": 86,
       "paddedWidth": 32,
@@ -114,6 +309,156 @@
       "discard": false
     },
     {
+      "id": "ASSET_11_0_0_2_0",
+      "paddedX": 0,
+      "paddedY": 118,
+      "paddedWidth": 32,
+      "paddedHeight": 32,
+      "name": "CART_METAL_SM",
+      "label": "Small Metal Cart",
+      "category": "storage",
+      "footprintW": 2,
+      "footprintH": 2,
+      "isDesk": false,
+      "canPlaceOnWalls": false,
+      "discard": false
+    },
+    {
+      "id": "ASSET_11_0_1_0_0",
+      "paddedX": 32,
+      "paddedY": 64,
+      "paddedWidth": 96,
+      "paddedHeight": 16,
+      "name": "SHELF_WALL_SM",
+      "label": "Small Wall Shelf",
+      "category": "storage",
+      "footprintW": 6,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_11_0_1_1_0",
+      "paddedX": 32,
+      "paddedY": 80,
+      "paddedWidth": 96,
+      "paddedHeight": 16,
+      "name": "SHELF_WALL_SM",
+      "label": "Small Wall Shelf",
+      "category": "storage",
+      "footprintW": 6,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_11_0_1_2_0_0_0",
+      "paddedX": 32,
+      "paddedY": 96,
+      "paddedWidth": 96,
+      "paddedHeight": 16,
+      "name": "SHELF_WOOD_SM",
+      "label": "Small Wooden Wall Shelf",
+      "category": "storage",
+      "footprintW": 6,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_11_0_1_2_0_1_0_0_0",
+      "paddedX": 32,
+      "paddedY": 112,
+      "paddedWidth": 32,
+      "paddedHeight": 16,
+      "name": "WHITEBOARD_SM",
+      "label": "Small Whiteboard",
+      "category": "decor",
+      "footprintW": 2,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_11_0_1_2_0_1_0_0_1",
+      "paddedX": 64,
+      "paddedY": 112,
+      "paddedWidth": 32,
+      "paddedHeight": 16,
+      "name": "WALL_SHELF_SM",
+      "label": "Small Wall Shelf",
+      "category": "storage",
+      "footprintW": 2,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_11_0_1_2_0_1_0_0_2",
+      "paddedX": 96,
+      "paddedY": 112,
+      "paddedWidth": 32,
+      "paddedHeight": 16,
+      "name": "DESK_WOOD_SM",
+      "label": "Small Wood Desk",
+      "category": "desks",
+      "footprintW": 2,
+      "footprintH": 1,
+      "isDesk": true,
+      "canPlaceOnWalls": false,
+      "discard": false
+    },
+    {
+      "id": "ASSET_11_0_1_3_0_0_0",
+      "paddedX": 32,
+      "paddedY": 128,
+      "paddedWidth": 32,
+      "paddedHeight": 16,
+      "name": "WHITEBOARD_WALL_SM",
+      "label": "Small Wall Whiteboard",
+      "category": "decor",
+      "footprintW": 2,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_11_0_1_3_0_0_1",
+      "paddedX": 64,
+      "paddedY": 128,
+      "paddedWidth": 32,
+      "paddedHeight": 16,
+      "name": "BOARD_CORK_SM",
+      "label": "Small Cork Board",
+      "category": "decor",
+      "footprintW": 2,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_11_0_1_3_0_0_2",
+      "paddedX": 96,
+      "paddedY": 128,
+      "paddedWidth": 32,
+      "paddedHeight": 16,
+      "name": "BULLETIN_BOARD_WOOD_SM",
+      "label": "Small Wood Bulletin Board",
+      "category": "decor",
+      "footprintW": 2,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
       "id": "ASSET_15",
       "paddedX": 128,
       "paddedY": 64,
@@ -121,11 +466,71 @@
       "paddedHeight": 32,
       "name": "SHELF_WALL_SM",
       "label": "Small Wall Shelf",
-      "category": "wall",
+      "category": "storage",
       "footprintW": 3,
       "footprintH": 2,
       "isDesk": false,
       "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_12",
+      "paddedX": 176,
+      "paddedY": 64,
+      "paddedWidth": 32,
+      "paddedHeight": 16,
+      "name": "SHELF_WALL_SM",
+      "label": "Small Wall Shelf",
+      "category": "storage",
+      "footprintW": 2,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_13",
+      "paddedX": 208,
+      "paddedY": 64,
+      "paddedWidth": 32,
+      "paddedHeight": 16,
+      "name": "PIANO_KEYBOARD_SM",
+      "label": "Small Piano Keyboard",
+      "category": "electronics",
+      "footprintW": 2,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": false,
+      "discard": false
+    },
+    {
+      "id": "ASSET_14",
+      "paddedX": 240,
+      "paddedY": 64,
+      "paddedWidth": 16,
+      "paddedHeight": 16,
+      "name": "SHELF_WALL_SM",
+      "label": "Small Wall Shelf",
+      "category": "storage",
+      "footprintW": 1,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_16",
+      "paddedX": 240,
+      "paddedY": 80,
+      "paddedWidth": 16,
+      "paddedHeight": 16,
+      "name": "BED_SINGLE_BLUE",
+      "label": "Single Bed Blue",
+      "category": "misc",
+      "footprintW": 1,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": false,
       "discard": false
     },
     {
@@ -149,8 +554,8 @@
       "paddedY": 88,
       "paddedWidth": 32,
       "paddedHeight": 32,
-      "name": "BOOKSHELF_SMALL_COLORFUL",
-      "label": "Small Colorful Bookshelf",
+      "name": "BOOKSHELF_WOOD_SM",
+      "label": "Small Wooden Bookshelf",
       "category": "storage",
       "footprintW": 2,
       "footprintH": 2,
@@ -159,13 +564,73 @@
       "discard": false
     },
     {
+      "id": "ASSET_20",
+      "paddedX": 128,
+      "paddedY": 96,
+      "paddedWidth": 48,
+      "paddedHeight": 16,
+      "name": "BOOKSHELF_WOOD_SM",
+      "label": "Small Wooden Bookshelf",
+      "category": "storage",
+      "footprintW": 3,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": false,
+      "discard": false
+    },
+    {
+      "id": "ASSET_19",
+      "paddedX": 240,
+      "paddedY": 96,
+      "paddedWidth": 16,
+      "paddedHeight": 16,
+      "name": "WHITEBOARD_SM",
+      "label": "Small Whiteboard",
+      "category": "electronics",
+      "footprintW": 1,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_22",
+      "paddedX": 128,
+      "paddedY": 112,
+      "paddedWidth": 48,
+      "paddedHeight": 16,
+      "name": "SHELF_WALL_WOOD_SM",
+      "label": "Small Wooden Wall Shelf",
+      "category": "storage",
+      "footprintW": 3,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_21",
+      "paddedX": 240,
+      "paddedY": 112,
+      "paddedWidth": 16,
+      "paddedHeight": 16,
+      "name": "BOOKSHELF_TALL",
+      "label": "Tall Bookshelf",
+      "category": "storage",
+      "footprintW": 1,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": false,
+      "discard": false
+    },
+    {
       "id": "ASSET_25",
       "paddedX": 128,
-      "paddedY": 136,
+      "paddedY": 142,
       "paddedWidth": 48,
       "paddedHeight": 32,
-      "name": "BOOKSHELF_DOUBLE_TALL",
-      "label": "Double Tall Bookshelf",
+      "name": "BOOKSHELF_WOOD_SM",
+      "label": "Small Wooden Bookshelf",
       "category": "storage",
       "footprintW": 3,
       "footprintH": 2,
@@ -179,8 +644,8 @@
       "paddedY": 136,
       "paddedWidth": 32,
       "paddedHeight": 32,
-      "name": "BOOKSHELF_WALL_SM",
-      "label": "Small Wall Bookshelf",
+      "name": "BOOKSHELF_WOOD_SM",
+      "label": "Small Wooden Bookshelf",
       "category": "storage",
       "footprintW": 2,
       "footprintH": 2,
@@ -209,8 +674,8 @@
       "paddedY": 144,
       "paddedWidth": 16,
       "paddedHeight": 32,
-      "name": "POLE_WOOD_VERTICAL",
-      "label": "Wooden Pole",
+      "name": "PILLAR_WOOD_TALL",
+      "label": "Tall Wooden Pillar",
       "category": "decor",
       "footprintW": 1,
       "footprintH": 2,
@@ -219,14 +684,14 @@
       "discard": false
     },
     {
-      "id": "ASSET_27_A",
+      "id": "ASSET_27_0_0_0_0",
       "paddedX": 0,
       "paddedY": 160,
       "paddedWidth": 32,
       "paddedHeight": 48,
-      "name": "WALL_PANEL_BEIGE",
-      "label": "Beige Wall Panel",
-      "category": "wall",
+      "name": "BOARD_CORK_SM",
+      "label": "Small Cork Board",
+      "category": "decor",
       "footprintW": 2,
       "footprintH": 3,
       "isDesk": false,
@@ -234,9 +699,114 @@
       "discard": false
     },
     {
-      "id": "ASSET_27_B_A_A",
+      "id": "ASSET_27_0_0_0_1",
+      "paddedX": 32,
+      "paddedY": 160,
+      "paddedWidth": 32,
+      "paddedHeight": 48,
+      "name": "WHITEBOARD_WALL_SM",
+      "label": "Small Wall Whiteboard",
+      "category": "decor",
+      "footprintW": 2,
+      "footprintH": 3,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_27_0_0_0_2",
+      "paddedX": 64,
+      "paddedY": 160,
+      "paddedWidth": 32,
+      "paddedHeight": 48,
+      "name": "WALL_PANEL_BLUE_SM",
+      "label": "Small Blue Wall Panel",
+      "category": "decor",
+      "footprintW": 2,
+      "footprintH": 3,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_27_0_0_0_3",
+      "paddedX": 96,
+      "paddedY": 160,
+      "paddedWidth": 32,
+      "paddedHeight": 48,
+      "name": "RUG_RECTANGULAR_GOLD",
+      "label": "Gold Rectangular Rug",
+      "category": "decor",
+      "footprintW": 2,
+      "footprintH": 3,
+      "isDesk": false,
+      "canPlaceOnWalls": false,
+      "discard": false
+    },
+    {
+      "id": "ASSET_27_0_0_1_0",
+      "paddedX": 0,
+      "paddedY": 208,
+      "paddedWidth": 32,
+      "paddedHeight": 48,
+      "name": "WALL_PANEL_BLUE_SM",
+      "label": "Small Blue Wall Panel",
+      "category": "decor",
+      "footprintW": 2,
+      "footprintH": 3,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_27_0_0_1_1",
+      "paddedX": 32,
+      "paddedY": 208,
+      "paddedWidth": 32,
+      "paddedHeight": 48,
+      "name": "BOARD_CORK_SM",
+      "label": "Small Cork Board",
+      "category": "decor",
+      "footprintW": 2,
+      "footprintH": 3,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_27_0_0_1_2",
+      "paddedX": 64,
+      "paddedY": 208,
+      "paddedWidth": 32,
+      "paddedHeight": 48,
+      "name": "FRAME_WOOD_SM",
+      "label": "Small Wooden Frame",
+      "category": "decor",
+      "footprintW": 2,
+      "footprintH": 3,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_27_0_0_1_3",
+      "paddedX": 96,
+      "paddedY": 208,
+      "paddedWidth": 32,
+      "paddedHeight": 48,
+      "name": "PAPER_SHEET_BLANK",
+      "label": "Blank Paper Sheet",
+      "category": "misc",
+      "footprintW": 2,
+      "footprintH": 3,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_27_0_1_0_0_0_0",
       "paddedX": 128,
-      "paddedY": 183,
+      "paddedY": 184,
       "paddedWidth": 16,
       "paddedHeight": 32,
       "name": "BOOKSHELF_TALL",
@@ -249,28 +819,13 @@
       "discard": false
     },
     {
-      "id": "ASSET_27_B_A_B_A",
+      "id": "ASSET_27_0_1_0_0_0_1",
       "paddedX": 144,
-      "paddedY": 183,
+      "paddedY": 184,
       "paddedWidth": 16,
       "paddedHeight": 32,
-      "name": "BOOKSHELF_TALL_GLASS",
-      "label": "Tall Glass Display Bookshelf",
-      "category": "storage",
-      "footprintW": 1,
-      "footprintH": 2,
-      "isDesk": false,
-      "canPlaceOnWalls": false,
-      "discard": false
-    },
-    {
-      "id": "ASSET_27_B_A_B_B_A",
-      "paddedX": 160,
-      "paddedY": 183,
-      "paddedWidth": 16,
-      "paddedHeight": 32,
-      "name": "FRIDGE_STEEL_LG",
-      "label": "Large Steel Refrigerator",
+      "name": "VENDING_MACHINE_DRINK",
+      "label": "Drink Vending Machine",
       "category": "electronics",
       "footprintW": 1,
       "footprintH": 2,
@@ -279,9 +834,9 @@
       "discard": false
     },
     {
-      "id": "ASSET_27_B_A_B_B_B_A",
-      "paddedX": 176,
-      "paddedY": 183,
+      "id": "ASSET_27_0_1_0_0_0_2",
+      "paddedX": 160,
+      "paddedY": 184,
       "paddedWidth": 16,
       "paddedHeight": 32,
       "name": "BOOKSHELF_TALL",
@@ -294,13 +849,28 @@
       "discard": false
     },
     {
-      "id": "ASSET_27_B_A_B_B_B_B",
+      "id": "ASSET_27_0_1_0_0_0_3",
+      "paddedX": 176,
+      "paddedY": 184,
+      "paddedWidth": 16,
+      "paddedHeight": 32,
+      "name": "BOOKSHELF_TALL",
+      "label": "Tall Bookshelf",
+      "category": "storage",
+      "footprintW": 1,
+      "footprintH": 2,
+      "isDesk": false,
+      "canPlaceOnWalls": false,
+      "discard": false
+    },
+    {
+      "id": "ASSET_27_0_1_0_0_0_4",
       "paddedX": 192,
-      "paddedY": 183,
+      "paddedY": 184,
       "paddedWidth": 32,
       "paddedHeight": 32,
-      "name": "BOOKSHELF_WOOD_SM",
-      "label": "Small Wooden Bookshelf",
+      "name": "BOOKSHELF_METAL_SM",
+      "label": "Small Metal Bookshelf",
       "category": "storage",
       "footprintW": 2,
       "footprintH": 2,
@@ -309,39 +879,9 @@
       "discard": false
     },
     {
-      "id": "ASSET_27_B_B_0_0",
+      "id": "ASSET_27_0_1_1_0_0_0",
       "paddedX": 128,
-      "paddedY": 221,
-      "paddedWidth": 16,
-      "paddedHeight": 32,
-      "name": "DRESSER_WOOD_SM",
-      "label": "Small Wooden Dresser",
-      "category": "storage",
-      "footprintW": 1,
-      "footprintH": 2,
-      "isDesk": false,
-      "canPlaceOnWalls": false,
-      "discard": false
-    },
-    {
-      "id": "ASSET_27_B_B_0_1",
-      "paddedX": 144,
-      "paddedY": 221,
-      "paddedWidth": 16,
-      "paddedHeight": 32,
-      "name": "FILING_CABINET_SM",
-      "label": "Small Filing Cabinet",
-      "category": "storage",
-      "footprintW": 1,
-      "footprintH": 2,
-      "isDesk": false,
-      "canPlaceOnWalls": false,
-      "discard": false
-    },
-    {
-      "id": "ASSET_27_B_B_0_2",
-      "paddedX": 160,
-      "paddedY": 221,
+      "paddedY": 224,
       "paddedWidth": 16,
       "paddedHeight": 32,
       "name": "CABINET_WOOD_SM",
@@ -354,14 +894,44 @@
       "discard": false
     },
     {
-      "id": "ASSET_27_B_B_0_3",
+      "id": "ASSET_27_0_1_1_0_0_1",
+      "paddedX": 144,
+      "paddedY": 224,
+      "paddedWidth": 16,
+      "paddedHeight": 32,
+      "name": "WINDOW_FRAME_SM",
+      "label": "Small Window Frame",
+      "category": "decor",
+      "footprintW": 1,
+      "footprintH": 2,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_27_0_1_1_0_0_2",
+      "paddedX": 160,
+      "paddedY": 224,
+      "paddedWidth": 16,
+      "paddedHeight": 32,
+      "name": "CABINET_WOOD_SM",
+      "label": "Small Wooden Cabinet",
+      "category": "storage",
+      "footprintW": 1,
+      "footprintH": 2,
+      "isDesk": false,
+      "canPlaceOnWalls": false,
+      "discard": false
+    },
+    {
+      "id": "ASSET_27_0_1_1_0_0_3",
       "paddedX": 176,
-      "paddedY": 221,
+      "paddedY": 224,
       "paddedWidth": 16,
       "paddedHeight": 32,
-      "name": "CABINET_TALL_GREY",
-      "label": "Tall Grey Cabinet",
-      "category": "wall",
+      "name": "WINDOW_DOUBLE_BLUE",
+      "label": "Double Blue Window",
+      "category": "decor",
       "footprintW": 1,
       "footprintH": 2,
       "isDesk": false,
@@ -369,33 +939,33 @@
       "discard": false
     },
     {
-      "id": "ASSET_27_B_B_0_4",
+      "id": "ASSET_27_0_1_1_0_0_4",
       "paddedX": 192,
-      "paddedY": 221,
+      "paddedY": 224,
       "paddedWidth": 16,
       "paddedHeight": 32,
-      "name": "FILING_CABINET_SM",
-      "label": "Small Filing Cabinet",
-      "category": "wall",
+      "name": "FILING_CABINET_METAL_SM",
+      "label": "Small Metal Filing Cabinet",
+      "category": "storage",
       "footprintW": 1,
       "footprintH": 2,
       "isDesk": false,
-      "canPlaceOnWalls": true,
+      "canPlaceOnWalls": false,
       "discard": false
     },
     {
-      "id": "ASSET_27_B_B_0_5",
+      "id": "ASSET_27_0_1_1_0_0_5",
       "paddedX": 208,
-      "paddedY": 221,
+      "paddedY": 224,
       "paddedWidth": 16,
       "paddedHeight": 32,
-      "name": "CABINET_TALL_BLUE",
-      "label": "Tall Blue Cabinet",
-      "category": "wall",
+      "name": "CABINET_BLUE_TALL",
+      "label": "Blue Tall Cabinet",
+      "category": "storage",
       "footprintW": 1,
       "footprintH": 2,
       "isDesk": false,
-      "canPlaceOnWalls": true,
+      "canPlaceOnWalls": false,
       "discard": false
     },
     {
@@ -434,8 +1004,23 @@
       "paddedY": 224,
       "paddedWidth": 16,
       "paddedHeight": 32,
+      "name": "LAMP_FLOOR_TALL",
+      "label": "Tall Floor Lamp",
+      "category": "decor",
+      "footprintW": 1,
+      "footprintH": 2,
+      "isDesk": false,
+      "canPlaceOnWalls": false,
+      "discard": false
+    },
+    {
+      "id": "ASSET_31",
+      "paddedX": 240,
+      "paddedY": 224,
+      "paddedWidth": 16,
+      "paddedHeight": 32,
       "name": "PILLAR_STONE_TALL",
-      "label": "Tall Stone Pillar",
+      "label": "Stone Pillar Tall",
       "category": "decor",
       "footprintW": 1,
       "footprintH": 2,
@@ -449,13 +1034,13 @@
       "paddedY": 258,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "CHAIR_OFFICE_CUSHIONED",
-      "label": "Cushioned Office Chair",
-      "category": "wall",
+      "name": "CHAIR_CUSHIONED_PURPLE",
+      "label": "Purple Cushioned Chair",
+      "category": "chairs",
       "footprintW": 1,
       "footprintH": 1,
       "isDesk": false,
-      "canPlaceOnWalls": true,
+      "canPlaceOnWalls": false,
       "discard": false
     },
     {
@@ -464,13 +1049,13 @@
       "paddedY": 258,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "CHAIR_CUSHION_SM",
-      "label": "Cushioned Chair",
-      "category": "wall",
+      "name": "CHAIR_CUSHIONED_SM",
+      "label": "Small Cushioned Chair",
+      "category": "chairs",
       "footprintW": 1,
       "footprintH": 1,
       "isDesk": false,
-      "canPlaceOnWalls": true,
+      "canPlaceOnWalls": false,
       "discard": false
     },
     {
@@ -479,13 +1064,13 @@
       "paddedY": 258,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "BOOKSHELF_SM",
-      "label": "Small Bookshelf",
-      "category": "wall",
+      "name": "CHAIR_OFFICE_MAGENTA",
+      "label": "Magenta Office Chair",
+      "category": "chairs",
       "footprintW": 1,
       "footprintH": 1,
       "isDesk": false,
-      "canPlaceOnWalls": true,
+      "canPlaceOnWalls": false,
       "discard": false
     },
     {
@@ -496,11 +1081,11 @@
       "paddedHeight": 16,
       "name": "SUITCASE_SM",
       "label": "Small Suitcase",
-      "category": "wall",
+      "category": "misc",
       "footprintW": 1,
       "footprintH": 1,
       "isDesk": false,
-      "canPlaceOnWalls": true,
+      "canPlaceOnWalls": false,
       "discard": false
     },
     {
@@ -509,9 +1094,9 @@
       "paddedY": 258,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "SERVER_RACK_SM",
-      "label": "Small Server Rack",
-      "category": "electronics",
+      "name": "WATER_COOLER",
+      "label": "Water Cooler",
+      "category": "misc",
       "footprintW": 1,
       "footprintH": 1,
       "isDesk": false,
@@ -524,13 +1109,13 @@
       "paddedY": 258,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "SHELF_BOOKCASE_SM",
-      "label": "Small Bookshelf",
+      "name": "SHELF_WALL_SM",
+      "label": "Small Wall Shelf",
       "category": "storage",
       "footprintW": 1,
       "footprintH": 1,
       "isDesk": false,
-      "canPlaceOnWalls": false,
+      "canPlaceOnWalls": true,
       "discard": false
     },
     {
@@ -540,7 +1125,7 @@
       "paddedWidth": 16,
       "paddedHeight": 16,
       "name": "PHONE_DESK_BLACK",
-      "label": "Desk Phone Black",
+      "label": "Black Desk Phone",
       "category": "electronics",
       "footprintW": 1,
       "footprintH": 1,
@@ -554,7 +1139,7 @@
       "paddedY": 258,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "GLASS_WATER_SM",
+      "name": "GLASS_WATER_CUP",
       "label": "Glass of Water",
       "category": "decor",
       "footprintW": 1,
@@ -565,14 +1150,29 @@
     },
     {
       "id": "ASSET_42",
-      "paddedX": 142,
-      "paddedY": 264,
-      "paddedWidth": 16,
+      "paddedX": 129,
+      "paddedY": 265,
+      "paddedWidth": 32,
+      "paddedHeight": 32,
+      "name": "WATER_COOLER_SM",
+      "label": "Water Cooler",
+      "category": "misc",
+      "footprintW": 2,
+      "footprintH": 2,
+      "isDesk": false,
+      "canPlaceOnWalls": false,
+      "discard": false
+    },
+    {
+      "id": "ASSET_43",
+      "paddedX": 159,
+      "paddedY": 265,
+      "paddedWidth": 32,
       "paddedHeight": 32,
       "name": "WATER_COOLER",
       "label": "Water Cooler",
-      "category": "misc",
-      "footprintW": 1,
+      "category": "electronics",
+      "footprintW": 2,
       "footprintH": 2,
       "isDesk": false,
       "canPlaceOnWalls": false,
@@ -586,11 +1186,11 @@
       "paddedHeight": 32,
       "name": "FILING_CABINET_SM",
       "label": "Small Filing Cabinet",
-      "category": "wall",
+      "category": "storage",
       "footprintW": 1,
       "footprintH": 2,
       "isDesk": false,
-      "canPlaceOnWalls": true,
+      "canPlaceOnWalls": false,
       "discard": false
     },
     {
@@ -614,158 +1214,13 @@
       "paddedY": 264,
       "paddedWidth": 32,
       "paddedHeight": 32,
-      "name": "VENDING_MACHINE_SNACK",
-      "label": "Snack Vending Machine",
-      "category": "wall",
+      "name": "VENDING_MACHINE_RED",
+      "label": "Red Vending Machine",
+      "category": "electronics",
       "footprintW": 2,
       "footprintH": 2,
       "isDesk": false,
-      "canPlaceOnWalls": true,
-      "discard": false
-    },
-    {
-      "id": "ASSET_44",
-      "paddedX": 130,
-      "paddedY": 278,
-      "paddedWidth": 16,
-      "paddedHeight": 16,
-      "erasedPixels": [
-        {
-          "x": 14,
-          "y": 1
-        },
-        {
-          "x": 14,
-          "y": 2
-        },
-        {
-          "x": 14,
-          "y": 3
-        },
-        {
-          "x": 14,
-          "y": 4
-        },
-        {
-          "x": 14,
-          "y": 5
-        },
-        {
-          "x": 14,
-          "y": 6
-        },
-        {
-          "x": 14,
-          "y": 7
-        },
-        {
-          "x": 14,
-          "y": 8
-        },
-        {
-          "x": 14,
-          "y": 9
-        },
-        {
-          "x": 14,
-          "y": 10
-        },
-        {
-          "x": 14,
-          "y": 11
-        },
-        {
-          "x": 14,
-          "y": 12
-        },
-        {
-          "x": 14,
-          "y": 13
-        },
-        {
-          "x": 14,
-          "y": 14
-        },
-        {
-          "x": 14,
-          "y": 15
-        },
-        {
-          "x": 15,
-          "y": 15
-        },
-        {
-          "x": 15,
-          "y": 14
-        },
-        {
-          "x": 15,
-          "y": 13
-        },
-        {
-          "x": 15,
-          "y": 12
-        },
-        {
-          "x": 15,
-          "y": 11
-        },
-        {
-          "x": 15,
-          "y": 10
-        },
-        {
-          "x": 15,
-          "y": 9
-        },
-        {
-          "x": 15,
-          "y": 8
-        },
-        {
-          "x": 15,
-          "y": 7
-        },
-        {
-          "x": 15,
-          "y": 6
-        },
-        {
-          "x": 15,
-          "y": 5
-        },
-        {
-          "x": 15,
-          "y": 4
-        },
-        {
-          "x": 15,
-          "y": 3
-        },
-        {
-          "x": 15,
-          "y": 2
-        },
-        {
-          "x": 15,
-          "y": 1
-        },
-        {
-          "x": 15,
-          "y": 0
-        },
-        {
-          "x": 14,
-          "y": 0
-        }
-      ],
-      "name": "CAN_SODA_SM",
-      "label": "Soda Can",
-      "category": "wall",
-      "footprintW": 1,
-      "footprintH": 1,
-      "isDesk": false,
-      "canPlaceOnWalls": true,
+      "canPlaceOnWalls": false,
       "discard": false
     },
     {
@@ -789,13 +1244,28 @@
       "paddedY": 288,
       "paddedWidth": 16,
       "paddedHeight": 32,
-      "name": "CABINET_TALL_BLUE",
-      "label": "Tall Blue Cabinet",
-      "category": "wall",
+      "name": "SHELF_WALL_SM",
+      "label": "Small Wall Shelf",
+      "category": "storage",
       "footprintW": 1,
       "footprintH": 2,
       "isDesk": false,
       "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_48",
+      "paddedX": 48,
+      "paddedY": 288,
+      "paddedWidth": 16,
+      "paddedHeight": 32,
+      "name": "LOCKER_TALL_GRAY",
+      "label": "Tall Gray Locker",
+      "category": "storage",
+      "footprintW": 1,
+      "footprintH": 2,
+      "isDesk": false,
+      "canPlaceOnWalls": false,
       "discard": false
     },
     {
@@ -840,7 +1310,7 @@
       "footprintW": 2,
       "footprintH": 1,
       "isDesk": false,
-      "canPlaceOnWalls": false,
+      "canPlaceOnWalls": true,
       "discard": false
     },
     {
@@ -849,143 +1319,51 @@
       "paddedY": 299,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "BALL_SOCCER",
-      "label": "Soccer Ball",
+      "name": "CLOCK_WALL_ROUND_SM",
+      "label": "Small Round Wall Clock",
       "category": "decor",
       "footprintW": 1,
       "footprintH": 1,
       "isDesk": false,
-      "canPlaceOnWalls": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_52",
+      "paddedX": 237,
+      "paddedY": 299,
+      "paddedWidth": 16,
+      "paddedHeight": 16,
+      "name": "CLOCK_WALL_ROUND_SM",
+      "label": "Small Round Wall Clock",
+      "category": "decor",
+      "footprintW": 1,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_53",
+      "paddedX": 207,
+      "paddedY": 301,
+      "paddedWidth": 16,
+      "paddedHeight": 16,
+      "name": "CLOCK_WALL_ROUND_SM",
+      "label": "Small Round Wall Clock",
+      "category": "decor",
+      "footprintW": 1,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
       "discard": false
     },
     {
       "id": "ASSET_54",
-      "paddedX": 125,
-      "paddedY": 303,
+      "paddedX": 129,
+      "paddedY": 304,
       "paddedWidth": 32,
       "paddedHeight": 32,
-      "erasedPixels": [
-        {
-          "x": 1,
-          "y": 10
-        },
-        {
-          "x": 1,
-          "y": 9
-        },
-        {
-          "x": 1,
-          "y": 8
-        },
-        {
-          "x": 1,
-          "y": 7
-        },
-        {
-          "x": 1,
-          "y": 6
-        },
-        {
-          "x": 1,
-          "y": 5
-        },
-        {
-          "x": 1,
-          "y": 4
-        },
-        {
-          "x": 1,
-          "y": 3
-        },
-        {
-          "x": 1,
-          "y": 2
-        },
-        {
-          "x": 1,
-          "y": 1
-        },
-        {
-          "x": 1,
-          "y": 0
-        },
-        {
-          "x": 0,
-          "y": 0
-        },
-        {
-          "x": 0,
-          "y": 1
-        },
-        {
-          "x": 0,
-          "y": 2
-        },
-        {
-          "x": 0,
-          "y": 3
-        },
-        {
-          "x": 0,
-          "y": 4
-        },
-        {
-          "x": 0,
-          "y": 5
-        },
-        {
-          "x": 0,
-          "y": 6
-        },
-        {
-          "x": 0,
-          "y": 7
-        },
-        {
-          "x": 0,
-          "y": 8
-        },
-        {
-          "x": 0,
-          "y": 9
-        },
-        {
-          "x": 0,
-          "y": 10
-        },
-        {
-          "x": 2,
-          "y": 7
-        },
-        {
-          "x": 2,
-          "y": 6
-        },
-        {
-          "x": 2,
-          "y": 5
-        },
-        {
-          "x": 2,
-          "y": 4
-        },
-        {
-          "x": 2,
-          "y": 3
-        },
-        {
-          "x": 2,
-          "y": 2
-        },
-        {
-          "x": 2,
-          "y": 1
-        },
-        {
-          "x": 2,
-          "y": 0
-        }
-      ],
       "name": "PHONE_MOBILE_SM",
       "label": "Mobile Phone",
       "category": "electronics",
@@ -998,13 +1376,13 @@
     {
       "id": "ASSET_55",
       "paddedX": 161,
-      "paddedY": 303,
-      "paddedWidth": 16,
+      "paddedY": 304,
+      "paddedWidth": 32,
       "paddedHeight": 32,
-      "name": "WATER_COOLER",
-      "label": "Water Cooler",
+      "name": "PHONE_MOBILE_SM",
+      "label": "Mobile Phone",
       "category": "electronics",
-      "footprintW": 1,
+      "footprintW": 2,
       "footprintH": 2,
       "isDesk": false,
       "canPlaceOnWalls": false,
@@ -1013,11 +1391,11 @@
     {
       "id": "ASSET_61",
       "paddedX": 192,
-      "paddedY": 315,
+      "paddedY": 316,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "MIC_STUDIO_STAND",
-      "label": "Studio Microphone On Stand",
+      "name": "MICROPHONE_STUDIO",
+      "label": "Studio Microphone",
       "category": "electronics",
       "footprintW": 1,
       "footprintH": 1,
@@ -1026,18 +1404,48 @@
       "discard": false
     },
     {
+      "id": "ASSET_57",
+      "paddedX": 207,
+      "paddedY": 315,
+      "paddedWidth": 16,
+      "paddedHeight": 16,
+      "name": "CLOCK_WALL_ROUND",
+      "label": "Round Wall Clock",
+      "category": "decor",
+      "footprintW": 1,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_58",
+      "paddedX": 225,
+      "paddedY": 317,
+      "paddedWidth": 16,
+      "paddedHeight": 16,
+      "name": "CLOCK_WALL_ROUND_SM",
+      "label": "Small Round Wall Clock",
+      "category": "decor",
+      "footprintW": 1,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
       "id": "ASSET_63",
       "paddedX": 32,
       "paddedY": 330,
       "paddedWidth": 32,
       "paddedHeight": 16,
-      "name": "WINDOW_TRIPLE_WOOD",
-      "label": "Triple Pane Wood Window",
+      "name": "WINDOW_WOOD_SM",
+      "label": "Small Wooden Window",
       "category": "decor",
       "footprintW": 2,
       "footprintH": 1,
       "isDesk": false,
-      "canPlaceOnWalls": false,
+      "canPlaceOnWalls": true,
       "discard": false
     },
     {
@@ -1048,7 +1456,7 @@
       "paddedHeight": 16,
       "name": "WINDOW_DOUBLE_BLUE",
       "label": "Double Window Blue",
-      "category": "wall",
+      "category": "decor",
       "footprintW": 2,
       "footprintH": 1,
       "isDesk": false,
@@ -1061,13 +1469,73 @@
       "paddedY": 330,
       "paddedWidth": 32,
       "paddedHeight": 16,
-      "name": "WINDOW_DOUBLE_SM",
-      "label": "Small Double Window",
+      "name": "WINDOW_DOUBLE_BLUE",
+      "label": "Double Window",
       "category": "decor",
       "footprintW": 2,
       "footprintH": 1,
       "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_62",
+      "paddedX": 0,
+      "paddedY": 331,
+      "paddedWidth": 32,
+      "paddedHeight": 16,
+      "name": "SHELF_WALL_SM",
+      "label": "Small Wall Shelf",
+      "category": "storage",
+      "footprintW": 2,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_67",
+      "paddedX": 205,
+      "paddedY": 335,
+      "paddedWidth": 16,
+      "paddedHeight": 16,
+      "name": "BOOK_SINGLE_BLUE",
+      "label": "Small Blue Book",
+      "category": "decor",
+      "footprintW": 1,
+      "footprintH": 1,
+      "isDesk": false,
       "canPlaceOnWalls": false,
+      "discard": false
+    },
+    {
+      "id": "ASSET_68",
+      "paddedX": 221,
+      "paddedY": 335,
+      "paddedWidth": 16,
+      "paddedHeight": 16,
+      "name": "BULLETIN_BOARD_SM",
+      "label": "Small Bulletin Board",
+      "category": "decor",
+      "footprintW": 1,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_69",
+      "paddedX": 237,
+      "paddedY": 335,
+      "paddedWidth": 16,
+      "paddedHeight": 16,
+      "name": "BULLETIN_BOARD_SM",
+      "label": "Small Bulletin Board",
+      "category": "decor",
+      "footprintW": 1,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
       "discard": false
     },
     {
@@ -1076,13 +1544,13 @@
       "paddedY": 336,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "PLANT_SMALL_POTTED",
-      "label": "Small Potted Plant",
-      "category": "wall",
+      "name": "PLANT_SMALL_GREEN",
+      "label": "Small Green Plant",
+      "category": "decor",
       "footprintW": 1,
       "footprintH": 1,
       "isDesk": false,
-      "canPlaceOnWalls": true,
+      "canPlaceOnWalls": false,
       "discard": false
     },
     {
@@ -1091,9 +1559,9 @@
       "paddedY": 336,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "BOOK_SINGLE_BLUE",
-      "label": "Blue Book",
-      "category": "wall",
+      "name": "BULLETIN_BOARD_SM",
+      "label": "Small Bulletin Board",
+      "category": "decor",
       "footprintW": 1,
       "footprintH": 1,
       "isDesk": false,
@@ -1106,9 +1574,9 @@
       "paddedY": 336,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "BOOK_SINGLE_SM",
-      "label": "Small Book",
-      "category": "wall",
+      "name": "BULLETIN_BOARD_SM",
+      "label": "Small Bulletin Board",
+      "category": "decor",
       "footprintW": 1,
       "footprintH": 1,
       "isDesk": false,
@@ -1116,130 +1584,48 @@
       "discard": false
     },
     {
-      "id": "ASSET_73",
-      "paddedX": 179,
-      "paddedY": 336,
-      "paddedWidth": 16,
-      "paddedHeight": 16,
-      "erasedPixels": [
-        {
-          "x": 14,
-          "y": 3
-        },
-        {
-          "x": 14,
-          "y": 4
-        },
-        {
-          "x": 14,
-          "y": 5
-        },
-        {
-          "x": 14,
-          "y": 6
-        },
-        {
-          "x": 15,
-          "y": 7
-        },
-        {
-          "x": 15,
-          "y": 8
-        },
-        {
-          "x": 15,
-          "y": 9
-        },
-        {
-          "x": 15,
-          "y": 10
-        },
-        {
-          "x": 15,
-          "y": 11
-        },
-        {
-          "x": 15,
-          "y": 12
-        },
-        {
-          "x": 14,
-          "y": 10
-        },
-        {
-          "x": 14,
-          "y": 9
-        },
-        {
-          "x": 14,
-          "y": 8
-        },
-        {
-          "x": 14,
-          "y": 7
-        },
-        {
-          "x": 15,
-          "y": 5
-        },
-        {
-          "x": 15,
-          "y": 6
-        },
-        {
-          "x": 15,
-          "y": 4
-        },
-        {
-          "x": 15,
-          "y": 3
-        },
-        {
-          "x": 15,
-          "y": 2
-        },
-        {
-          "x": 14,
-          "y": 11
-        }
-      ],
-      "name": "CRATE_WOOD_SM",
-      "label": "Small Wooden Crate",
-      "category": "storage",
-      "footprintW": 1,
-      "footprintH": 1,
-      "isDesk": false,
-      "canPlaceOnWalls": false,
-      "discard": false
-    },
-    {
       "id": "ASSET_78",
-      "paddedX": 192,
-      "paddedY": 359,
-      "paddedWidth": 16,
-      "paddedHeight": 16,
-      "name": "MONITOR_DESKTOP_SM",
-      "label": "Desktop Monitor Small",
+      "paddedX": 191,
+      "paddedY": 353,
+      "paddedWidth": 32,
+      "paddedHeight": 32,
+      "name": "COMPUTER_DESKTOP_MONITOR",
+      "label": "Desktop Computer Monitor",
       "category": "electronics",
-      "footprintW": 1,
-      "footprintH": 1,
+      "footprintW": 2,
+      "footprintH": 2,
       "isDesk": false,
       "canPlaceOnWalls": false,
       "discard": false
     },
     {
       "id": "ASSET_79",
-      "paddedX": 224,
+      "paddedX": 223,
+      "paddedY": 353,
+      "paddedWidth": 32,
+      "paddedHeight": 32,
+      "name": "COMPUTER_DESKTOP_MONITOR",
+      "label": "Desktop Computer with Monitor",
+      "category": "electronics",
+      "footprintW": 2,
+      "footprintH": 2,
+      "isDesk": false,
+      "canPlaceOnWalls": false,
+      "discard": false
+    },
+    {
+      "id": "ASSET_89",
+      "paddedX": 238,
       "paddedY": 359,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "MONITOR_DESKTOP_SM",
-      "label": "Small Desktop Monitor",
-      "category": "electronics",
+      "name": "CLOCK_WALL_ROUND",
+      "label": "Round Wall Clock",
+      "category": "decor",
       "footprintW": 1,
       "footprintH": 1,
       "isDesk": false,
-      "canPlaceOnWalls": false,
+      "canPlaceOnWalls": true,
       "discard": false
     },
     {
@@ -1254,7 +1640,7 @@
       "footprintW": 1,
       "footprintH": 1,
       "isDesk": false,
-      "canPlaceOnWalls": false,
+      "canPlaceOnWalls": true,
       "discard": false
     },
     {
@@ -1263,13 +1649,43 @@
       "paddedY": 360,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "SIGN_NO_ENTRY",
-      "label": "No Entry Sign",
+      "name": "CLOCK_WALL_RED_ROUND",
+      "label": "Red Wall Clock",
       "category": "decor",
       "footprintW": 1,
       "footprintH": 1,
       "isDesk": false,
-      "canPlaceOnWalls": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_85",
+      "paddedX": 32,
+      "paddedY": 360,
+      "paddedWidth": 16,
+      "paddedHeight": 16,
+      "name": "CLOCK_WALL_ROUND",
+      "label": "Round Wall Clock",
+      "category": "decor",
+      "footprintW": 1,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_86",
+      "paddedX": 48,
+      "paddedY": 360,
+      "paddedWidth": 16,
+      "paddedHeight": 16,
+      "name": "CLOCK_WALL_ROUND_RED",
+      "label": "Round Wall Clock Red",
+      "category": "decor",
+      "footprintW": 1,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
       "discard": false
     },
     {
@@ -1278,71 +1694,41 @@
       "paddedY": 360,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "CLOCK_WALL_ROUND_SM",
-      "label": "Small Round Wall Clock",
+      "name": "CLOCK_WALL_ROUND",
+      "label": "Round Wall Clock",
       "category": "decor",
       "footprintW": 1,
       "footprintH": 1,
       "isDesk": false,
-      "canPlaceOnWalls": false,
+      "canPlaceOnWalls": true,
       "discard": false
     },
     {
       "id": "ASSET_74",
-      "paddedX": 128,
-      "paddedY": 360,
-      "paddedWidth": 16,
-      "paddedHeight": 16,
-      "name": "MONITOR_CRT_SM",
-      "label": "Small CRT Monitor",
-      "category": "electronics",
-      "footprintW": 1,
-      "footprintH": 1,
-      "isDesk": false,
-      "canPlaceOnWalls": false,
-      "discard": false
-    },
-    {
-      "id": "ASSET_75",
-      "paddedX": 128,
-      "paddedY": 360,
+      "paddedX": 127,
+      "paddedY": 353,
       "paddedWidth": 32,
-      "paddedHeight": 16,
-      "name": "PHONE_MOBILE_SM",
-      "label": "Mobile Phone",
+      "paddedHeight": 32,
+      "name": "COMPUTER_DESKTOP_CRT",
+      "label": "Desktop Computer With CRT Monitor",
       "category": "electronics",
       "footprintW": 2,
-      "footprintH": 1,
+      "footprintH": 2,
       "isDesk": false,
       "canPlaceOnWalls": false,
       "discard": false
     },
     {
       "id": "ASSET_76",
-      "paddedX": 160,
-      "paddedY": 360,
-      "paddedWidth": 16,
-      "paddedHeight": 16,
-      "name": "MONITOR_CRT_SM",
-      "label": "Small CRT Monitor",
-      "category": "electronics",
-      "footprintW": 1,
-      "footprintH": 1,
-      "isDesk": false,
-      "canPlaceOnWalls": false,
-      "discard": false
-    },
-    {
-      "id": "ASSET_77",
-      "paddedX": 160,
-      "paddedY": 360,
+      "paddedX": 159,
+      "paddedY": 353,
       "paddedWidth": 32,
-      "paddedHeight": 16,
+      "paddedHeight": 32,
       "name": "COMPUTER_DESKTOP_MONITOR",
-      "label": "Desktop Computer Monitor",
+      "label": "Desktop Computer With Monitor",
       "category": "electronics",
       "footprintW": 2,
-      "footprintH": 1,
+      "footprintH": 2,
       "isDesk": false,
       "canPlaceOnWalls": false,
       "discard": false
@@ -1368,13 +1754,13 @@
       "paddedY": 362,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "BOOKSHELF_TALL",
-      "label": "Tall Bookshelf",
-      "category": "storage",
+      "name": "WINDOW_BLINDS_SM",
+      "label": "Small Window With Blinds",
+      "category": "decor",
       "footprintW": 1,
       "footprintH": 1,
       "isDesk": false,
-      "canPlaceOnWalls": false,
+      "canPlaceOnWalls": true,
       "discard": false
     },
     {
@@ -1389,1193 +1775,37 @@
       "footprintW": 1,
       "footprintH": 1,
       "isDesk": false,
-      "canPlaceOnWalls": false,
-      "discard": false
-    },
-    {
-      "id": "ASSET_90",
-      "paddedX": 192,
-      "paddedY": 352,
-      "paddedWidth": 32,
-      "paddedHeight": 32,
-      "name": "COMPUTER_DESKTOP_MONITOR",
-      "label": "Desktop Computer Monitor",
-      "category": "electronics",
-      "footprintW": 2,
-      "footprintH": 2,
-      "isDesk": false,
-      "canPlaceOnWalls": false,
-      "discard": false
-    },
-    {
-      "id": "ASSET_92",
-      "paddedX": 224,
-      "paddedY": 352,
-      "paddedWidth": 32,
-      "paddedHeight": 32,
-      "name": "COMPUTER_DESKTOP_SM",
-      "label": "Desktop Computer",
-      "category": "electronics",
-      "footprintW": 2,
-      "footprintH": 2,
-      "isDesk": false,
-      "canPlaceOnWalls": false,
-      "discard": false
-    },
-    {
-      "id": "ASSET_94",
-      "paddedX": 128,
-      "paddedY": 353,
-      "paddedWidth": 32,
-      "paddedHeight": 32,
-      "name": "COMPUTER_DESKTOP_CRT",
-      "label": "Desktop Computer With CRT Monitor",
-      "category": "electronics",
-      "footprintW": 2,
-      "footprintH": 2,
-      "isDesk": false,
-      "canPlaceOnWalls": false,
-      "discard": false
-    },
-    {
-      "id": "ASSET_95",
-      "paddedX": 160,
-      "paddedY": 353,
-      "paddedWidth": 32,
-      "paddedHeight": 32,
-      "name": "COMPUTER_DESKTOP_TOWER",
-      "label": "Desktop Computer With Monitor",
-      "category": "electronics",
-      "footprintW": 2,
-      "footprintH": 2,
-      "isDesk": false,
-      "canPlaceOnWalls": false,
+      "canPlaceOnWalls": true,
       "discard": false
     },
     {
       "id": "ASSET_98",
       "paddedX": 159,
-      "paddedY": 370,
+      "paddedY": 385,
       "paddedWidth": 16,
-      "paddedHeight": 32,
-      "erasedPixels": [
-        {
-          "x": 4,
-          "y": 12
-        },
-        {
-          "x": 5,
-          "y": 12
-        },
-        {
-          "x": 6,
-          "y": 12
-        },
-        {
-          "x": 7,
-          "y": 12
-        },
-        {
-          "x": 8,
-          "y": 12
-        },
-        {
-          "x": 9,
-          "y": 12
-        },
-        {
-          "x": 10,
-          "y": 12
-        },
-        {
-          "x": 11,
-          "y": 12
-        },
-        {
-          "x": 12,
-          "y": 12
-        },
-        {
-          "x": 13,
-          "y": 12
-        },
-        {
-          "x": 14,
-          "y": 11
-        },
-        {
-          "x": 14,
-          "y": 10
-        },
-        {
-          "x": 14,
-          "y": 9
-        },
-        {
-          "x": 13,
-          "y": 10
-        },
-        {
-          "x": 13,
-          "y": 11
-        },
-        {
-          "x": 12,
-          "y": 11
-        },
-        {
-          "x": 12,
-          "y": 10
-        },
-        {
-          "x": 13,
-          "y": 9
-        },
-        {
-          "x": 11,
-          "y": 11
-        },
-        {
-          "x": 10,
-          "y": 11
-        },
-        {
-          "x": 10,
-          "y": 10
-        },
-        {
-          "x": 11,
-          "y": 9
-        },
-        {
-          "x": 12,
-          "y": 8
-        },
-        {
-          "x": 13,
-          "y": 8
-        },
-        {
-          "x": 12,
-          "y": 9
-        },
-        {
-          "x": 11,
-          "y": 10
-        },
-        {
-          "x": 9,
-          "y": 11
-        },
-        {
-          "x": 8,
-          "y": 11
-        },
-        {
-          "x": 9,
-          "y": 10
-        },
-        {
-          "x": 10,
-          "y": 9
-        },
-        {
-          "x": 8,
-          "y": 10
-        },
-        {
-          "x": 7,
-          "y": 11
-        },
-        {
-          "x": 6,
-          "y": 11
-        },
-        {
-          "x": 6,
-          "y": 10
-        },
-        {
-          "x": 7,
-          "y": 10
-        },
-        {
-          "x": 8,
-          "y": 9
-        },
-        {
-          "x": 9,
-          "y": 9
-        },
-        {
-          "x": 5,
-          "y": 11
-        },
-        {
-          "x": 4,
-          "y": 11
-        },
-        {
-          "x": 3,
-          "y": 11
-        },
-        {
-          "x": 3,
-          "y": 10
-        },
-        {
-          "x": 4,
-          "y": 9
-        },
-        {
-          "x": 5,
-          "y": 9
-        },
-        {
-          "x": 5,
-          "y": 8
-        },
-        {
-          "x": 6,
-          "y": 8
-        },
-        {
-          "x": 6,
-          "y": 9
-        },
-        {
-          "x": 4,
-          "y": 8
-        },
-        {
-          "x": 5,
-          "y": 10
-        },
-        {
-          "x": 4,
-          "y": 7
-        },
-        {
-          "x": 7,
-          "y": 9
-        },
-        {
-          "x": 3,
-          "y": 9
-        },
-        {
-          "x": 8,
-          "y": 8
-        },
-        {
-          "x": 9,
-          "y": 8
-        },
-        {
-          "x": 10,
-          "y": 8
-        },
-        {
-          "x": 11,
-          "y": 8
-        },
-        {
-          "x": 7,
-          "y": 8
-        },
-        {
-          "x": 4,
-          "y": 10
-        },
-        {
-          "x": 8,
-          "y": 7
-        },
-        {
-          "x": 9,
-          "y": 7
-        },
-        {
-          "x": 9,
-          "y": 6
-        },
-        {
-          "x": 8,
-          "y": 6
-        },
-        {
-          "x": 7,
-          "y": 7
-        },
-        {
-          "x": 6,
-          "y": 7
-        },
-        {
-          "x": 5,
-          "y": 7
-        },
-        {
-          "x": 3,
-          "y": 8
-        },
-        {
-          "x": 7,
-          "y": 6
-        },
-        {
-          "x": 7,
-          "y": 5
-        },
-        {
-          "x": 6,
-          "y": 5
-        },
-        {
-          "x": 8,
-          "y": 5
-        },
-        {
-          "x": 9,
-          "y": 5
-        },
-        {
-          "x": 10,
-          "y": 6
-        },
-        {
-          "x": 11,
-          "y": 6
-        },
-        {
-          "x": 10,
-          "y": 5
-        },
-        {
-          "x": 5,
-          "y": 5
-        },
-        {
-          "x": 4,
-          "y": 5
-        },
-        {
-          "x": 3,
-          "y": 5
-        },
-        {
-          "x": 3,
-          "y": 6
-        },
-        {
-          "x": 4,
-          "y": 6
-        },
-        {
-          "x": 5,
-          "y": 6
-        },
-        {
-          "x": 6,
-          "y": 6
-        },
-        {
-          "x": 11,
-          "y": 5
-        },
-        {
-          "x": 12,
-          "y": 6
-        },
-        {
-          "x": 12,
-          "y": 5
-        },
-        {
-          "x": 2,
-          "y": 5
-        },
-        {
-          "x": 4,
-          "y": 4
-        },
-        {
-          "x": 5,
-          "y": 4
-        },
-        {
-          "x": 6,
-          "y": 4
-        },
-        {
-          "x": 7,
-          "y": 4
-        },
-        {
-          "x": 8,
-          "y": 4
-        },
-        {
-          "x": 9,
-          "y": 4
-        },
-        {
-          "x": 10,
-          "y": 4
-        },
-        {
-          "x": 11,
-          "y": 4
-        },
-        {
-          "x": 12,
-          "y": 4
-        },
-        {
-          "x": 13,
-          "y": 4
-        },
-        {
-          "x": 14,
-          "y": 4
-        },
-        {
-          "x": 13,
-          "y": 3
-        },
-        {
-          "x": 14,
-          "y": 3
-        },
-        {
-          "x": 15,
-          "y": 3
-        },
-        {
-          "x": 12,
-          "y": 3
-        },
-        {
-          "x": 11,
-          "y": 3
-        },
-        {
-          "x": 10,
-          "y": 3
-        },
-        {
-          "x": 9,
-          "y": 3
-        },
-        {
-          "x": 8,
-          "y": 3
-        },
-        {
-          "x": 7,
-          "y": 3
-        },
-        {
-          "x": 6,
-          "y": 3
-        },
-        {
-          "x": 5,
-          "y": 3
-        },
-        {
-          "x": 4,
-          "y": 3
-        },
-        {
-          "x": 3,
-          "y": 3
-        },
-        {
-          "x": 2,
-          "y": 3
-        },
-        {
-          "x": 1,
-          "y": 3
-        },
-        {
-          "x": 0,
-          "y": 3
-        },
-        {
-          "x": 1,
-          "y": 2
-        },
-        {
-          "x": 2,
-          "y": 2
-        },
-        {
-          "x": 3,
-          "y": 1
-        },
-        {
-          "x": 4,
-          "y": 0
-        },
-        {
-          "x": 4,
-          "y": 1
-        },
-        {
-          "x": 4,
-          "y": 2
-        },
-        {
-          "x": 3,
-          "y": 4
-        },
-        {
-          "x": 3,
-          "y": 2
-        },
-        {
-          "x": 2,
-          "y": 0
-        },
-        {
-          "x": 1,
-          "y": 0
-        },
-        {
-          "x": 0,
-          "y": 1
-        },
-        {
-          "x": 1,
-          "y": 1
-        },
-        {
-          "x": 2,
-          "y": 1
-        },
-        {
-          "x": 5,
-          "y": 2
-        },
-        {
-          "x": 6,
-          "y": 2
-        },
-        {
-          "x": 7,
-          "y": 2
-        },
-        {
-          "x": 6,
-          "y": 1
-        },
-        {
-          "x": 5,
-          "y": 1
-        },
-        {
-          "x": 6,
-          "y": 0
-        },
-        {
-          "x": 5,
-          "y": 0
-        },
-        {
-          "x": 3,
-          "y": 0
-        },
-        {
-          "x": 0,
-          "y": 0
-        },
-        {
-          "x": 0,
-          "y": 2
-        },
-        {
-          "x": 8,
-          "y": 2
-        },
-        {
-          "x": 9,
-          "y": 2
-        },
-        {
-          "x": 10,
-          "y": 2
-        },
-        {
-          "x": 11,
-          "y": 2
-        },
-        {
-          "x": 12,
-          "y": 2
-        },
-        {
-          "x": 13,
-          "y": 2
-        },
-        {
-          "x": 14,
-          "y": 2
-        },
-        {
-          "x": 15,
-          "y": 2
-        },
-        {
-          "x": 10,
-          "y": 1
-        },
-        {
-          "x": 9,
-          "y": 1
-        },
-        {
-          "x": 8,
-          "y": 1
-        },
-        {
-          "x": 7,
-          "y": 1
-        },
-        {
-          "x": 11,
-          "y": 1
-        },
-        {
-          "x": 12,
-          "y": 1
-        },
-        {
-          "x": 13,
-          "y": 1
-        },
-        {
-          "x": 14,
-          "y": 1
-        },
-        {
-          "x": 15,
-          "y": 1
-        },
-        {
-          "x": 14,
-          "y": 0
-        },
-        {
-          "x": 13,
-          "y": 0
-        },
-        {
-          "x": 12,
-          "y": 0
-        },
-        {
-          "x": 11,
-          "y": 0
-        },
-        {
-          "x": 10,
-          "y": 0
-        },
-        {
-          "x": 9,
-          "y": 0
-        },
-        {
-          "x": 8,
-          "y": 0
-        },
-        {
-          "x": 7,
-          "y": 0
-        },
-        {
-          "x": 15,
-          "y": 0
-        },
-        {
-          "x": 14,
-          "y": 5
-        },
-        {
-          "x": 14,
-          "y": 6
-        },
-        {
-          "x": 13,
-          "y": 6
-        },
-        {
-          "x": 13,
-          "y": 7
-        },
-        {
-          "x": 13,
-          "y": 5
-        },
-        {
-          "x": 12,
-          "y": 7
-        },
-        {
-          "x": 11,
-          "y": 7
-        },
-        {
-          "x": 10,
-          "y": 7
-        },
-        {
-          "x": 5,
-          "y": 13
-        },
-        {
-          "x": 6,
-          "y": 13
-        },
-        {
-          "x": 7,
-          "y": 13
-        },
-        {
-          "x": 8,
-          "y": 13
-        },
-        {
-          "x": 9,
-          "y": 13
-        },
-        {
-          "x": 10,
-          "y": 13
-        },
-        {
-          "x": 11,
-          "y": 13
-        },
-        {
-          "x": 9,
-          "y": 14
-        },
-        {
-          "x": 8,
-          "y": 14
-        },
-        {
-          "x": 7,
-          "y": 14
-        },
-        {
-          "x": 6,
-          "y": 14
-        },
-        {
-          "x": 5,
-          "y": 14
-        },
-        {
-          "x": 4,
-          "y": 13
-        },
-        {
-          "x": 3,
-          "y": 13
-        },
-        {
-          "x": 2,
-          "y": 13
-        },
-        {
-          "x": 2,
-          "y": 12
-        },
-        {
-          "x": 3,
-          "y": 12
-        },
-        {
-          "x": 14,
-          "y": 12
-        },
-        {
-          "x": 15,
-          "y": 12
-        },
-        {
-          "x": 15,
-          "y": 11
-        },
-        {
-          "x": 15,
-          "y": 10
-        },
-        {
-          "x": 15,
-          "y": 9
-        },
-        {
-          "x": 14,
-          "y": 8
-        },
-        {
-          "x": 15,
-          "y": 8
-        },
-        {
-          "x": 13,
-          "y": 13
-        },
-        {
-          "x": 12,
-          "y": 13
-        },
-        {
-          "x": 12,
-          "y": 14
-        },
-        {
-          "x": 11,
-          "y": 14
-        }
-      ],
-      "name": "FOLDER_FILE_BLUE",
-      "label": "Blue File Folder",
-      "category": "wall",
+      "paddedHeight": 16,
+      "name": "BOOKSHELF_TALL",
+      "label": "Tall Bookshelf",
+      "category": "storage",
       "footprintW": 1,
-      "footprintH": 2,
+      "footprintH": 1,
       "isDesk": false,
-      "canPlaceOnWalls": true,
+      "canPlaceOnWalls": false,
       "discard": false
     },
     {
       "id": "ASSET_99",
-      "paddedX": 177,
-      "paddedY": 370,
+      "paddedX": 178,
+      "paddedY": 385,
       "paddedWidth": 16,
-      "paddedHeight": 32,
-      "erasedPixels": [
-        {
-          "x": 2,
-          "y": 9
-        },
-        {
-          "x": 1,
-          "y": 10
-        },
-        {
-          "x": 1,
-          "y": 11
-        },
-        {
-          "x": 0,
-          "y": 11
-        },
-        {
-          "x": 0,
-          "y": 12
-        },
-        {
-          "x": 0,
-          "y": 10
-        },
-        {
-          "x": 0,
-          "y": 9
-        },
-        {
-          "x": 0,
-          "y": 8
-        },
-        {
-          "x": 1,
-          "y": 7
-        },
-        {
-          "x": 1,
-          "y": 8
-        },
-        {
-          "x": 1,
-          "y": 9
-        },
-        {
-          "x": 1,
-          "y": 12
-        },
-        {
-          "x": 0,
-          "y": 7
-        },
-        {
-          "x": 0,
-          "y": 6
-        },
-        {
-          "x": 0,
-          "y": 5
-        },
-        {
-          "x": 1,
-          "y": 5
-        },
-        {
-          "x": 2,
-          "y": 6
-        },
-        {
-          "x": 3,
-          "y": 6
-        },
-        {
-          "x": 4,
-          "y": 6
-        },
-        {
-          "x": 5,
-          "y": 6
-        },
-        {
-          "x": 5,
-          "y": 5
-        },
-        {
-          "x": 5,
-          "y": 4
-        },
-        {
-          "x": 5,
-          "y": 3
-        },
-        {
-          "x": 5,
-          "y": 2
-        },
-        {
-          "x": 5,
-          "y": 1
-        },
-        {
-          "x": 5,
-          "y": 0
-        },
-        {
-          "x": 4,
-          "y": 3
-        },
-        {
-          "x": 4,
-          "y": 4
-        },
-        {
-          "x": 3,
-          "y": 4
-        },
-        {
-          "x": 3,
-          "y": 5
-        },
-        {
-          "x": 2,
-          "y": 5
-        },
-        {
-          "x": 1,
-          "y": 6
-        },
-        {
-          "x": 4,
-          "y": 5
-        },
-        {
-          "x": 4,
-          "y": 2
-        },
-        {
-          "x": 4,
-          "y": 1
-        },
-        {
-          "x": 4,
-          "y": 0
-        },
-        {
-          "x": 3,
-          "y": 2
-        },
-        {
-          "x": 3,
-          "y": 3
-        },
-        {
-          "x": 2,
-          "y": 4
-        },
-        {
-          "x": 2,
-          "y": 3
-        },
-        {
-          "x": 2,
-          "y": 2
-        },
-        {
-          "x": 1,
-          "y": 4
-        },
-        {
-          "x": 0,
-          "y": 4
-        },
-        {
-          "x": 1,
-          "y": 3
-        },
-        {
-          "x": 1,
-          "y": 2
-        },
-        {
-          "x": 1,
-          "y": 1
-        },
-        {
-          "x": 0,
-          "y": 3
-        },
-        {
-          "x": 0,
-          "y": 2
-        },
-        {
-          "x": 0,
-          "y": 1
-        },
-        {
-          "x": 2,
-          "y": 1
-        },
-        {
-          "x": 3,
-          "y": 1
-        },
-        {
-          "x": 2,
-          "y": 0
-        },
-        {
-          "x": 3,
-          "y": 0
-        },
-        {
-          "x": 1,
-          "y": 0
-        },
-        {
-          "x": 0,
-          "y": 0
-        },
-        {
-          "x": 6,
-          "y": 0
-        },
-        {
-          "x": 7,
-          "y": 0
-        },
-        {
-          "x": 8,
-          "y": 1
-        },
-        {
-          "x": 9,
-          "y": 1
-        },
-        {
-          "x": 10,
-          "y": 1
-        },
-        {
-          "x": 11,
-          "y": 1
-        },
-        {
-          "x": 12,
-          "y": 1
-        },
-        {
-          "x": 13,
-          "y": 1
-        },
-        {
-          "x": 14,
-          "y": 1
-        },
-        {
-          "x": 15,
-          "y": 1
-        },
-        {
-          "x": 15,
-          "y": 2
-        },
-        {
-          "x": 15,
-          "y": 3
-        },
-        {
-          "x": 15,
-          "y": 0
-        },
-        {
-          "x": 14,
-          "y": 0
-        },
-        {
-          "x": 13,
-          "y": 0
-        },
-        {
-          "x": 12,
-          "y": 0
-        },
-        {
-          "x": 11,
-          "y": 0
-        },
-        {
-          "x": 10,
-          "y": 0
-        },
-        {
-          "x": 9,
-          "y": 0
-        },
-        {
-          "x": 8,
-          "y": 0
-        },
-        {
-          "x": 7,
-          "y": 1
-        },
-        {
-          "x": 6,
-          "y": 1
-        }
-      ],
-      "name": "FOLDER_FILE_BLUE",
-      "label": "Blue File Folder",
-      "category": "wall",
+      "paddedHeight": 16,
+      "name": "FOLDER_DOCUMENT_BLUE",
+      "label": "Blue Document Folder",
+      "category": "misc",
       "footprintW": 1,
-      "footprintH": 2,
+      "footprintH": 1,
       "isDesk": false,
-      "canPlaceOnWalls": true,
+      "canPlaceOnWalls": false,
       "discard": false
     },
     {
@@ -2584,9 +1814,24 @@
       "paddedY": 384,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "WINDOW_SMALL_SQ",
-      "label": "Small Square Window",
+      "name": "WINDOW_FRAME_SM",
+      "label": "Small Window Frame",
       "category": "decor",
+      "footprintW": 1,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_107",
+      "paddedX": 128,
+      "paddedY": 397,
+      "paddedWidth": 16,
+      "paddedHeight": 16,
+      "name": "MONITOR_DESKTOP_SM",
+      "label": "Desktop Monitor",
+      "category": "electronics",
       "footprintW": 1,
       "footprintH": 1,
       "isDesk": false,
@@ -2594,147 +1839,16 @@
       "discard": false
     },
     {
-      "id": "ASSET_107",
-      "paddedX": 128,
-      "paddedY": 384,
-      "paddedWidth": 16,
-      "paddedHeight": 32,
-      "erasedPixels": [
-        {
-          "x": 3,
-          "y": 1
-        },
-        {
-          "x": 4,
-          "y": 1
-        },
-        {
-          "x": 5,
-          "y": 1
-        },
-        {
-          "x": 6,
-          "y": 1
-        },
-        {
-          "x": 7,
-          "y": 1
-        },
-        {
-          "x": 8,
-          "y": 1
-        },
-        {
-          "x": 9,
-          "y": 1
-        },
-        {
-          "x": 10,
-          "y": 1
-        },
-        {
-          "x": 11,
-          "y": 1
-        },
-        {
-          "x": 12,
-          "y": 1
-        },
-        {
-          "x": 12,
-          "y": 0
-        },
-        {
-          "x": 13,
-          "y": 0
-        },
-        {
-          "x": 11,
-          "y": 0
-        },
-        {
-          "x": 10,
-          "y": 0
-        },
-        {
-          "x": 9,
-          "y": 0
-        },
-        {
-          "x": 8,
-          "y": 0
-        },
-        {
-          "x": 7,
-          "y": 0
-        },
-        {
-          "x": 6,
-          "y": 0
-        },
-        {
-          "x": 5,
-          "y": 0
-        },
-        {
-          "x": 4,
-          "y": 0
-        },
-        {
-          "x": 3,
-          "y": 0
-        },
-        {
-          "x": 2,
-          "y": 0
-        }
-      ],
-      "name": "MONITOR_CRT_SM",
-      "label": "Small CRT Monitor",
-      "category": "electronics",
-      "footprintW": 1,
-      "footprintH": 2,
-      "isDesk": false,
-      "canPlaceOnWalls": false,
-      "discard": false
-    },
-    {
       "id": "ASSET_108",
       "paddedX": 144,
-      "paddedY": 384,
+      "paddedY": 397,
       "paddedWidth": 16,
-      "paddedHeight": 32,
-      "erasedPixels": [
-        {
-          "x": 2,
-          "y": 1
-        },
-        {
-          "x": 1,
-          "y": 1
-        },
-        {
-          "x": 0,
-          "y": 1
-        },
-        {
-          "x": 2,
-          "y": 0
-        },
-        {
-          "x": 1,
-          "y": 0
-        },
-        {
-          "x": 0,
-          "y": 0
-        }
-      ],
-      "name": "MONITOR_DESKTOP_SM",
-      "label": "Small Desktop Monitor",
-      "category": "electronics",
+      "paddedHeight": 16,
+      "name": "BOOKSHELF_TALL_BLUE",
+      "label": "Tall Blue Bookshelf",
+      "category": "storage",
       "footprintW": 1,
-      "footprintH": 2,
+      "footprintH": 1,
       "isDesk": false,
       "canPlaceOnWalls": false,
       "discard": false
@@ -2745,24 +1859,24 @@
       "paddedY": 394,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "BOOK_OPEN_SM",
-      "label": "Open Book Small",
-      "category": "decor",
+      "name": "WALL_SHELF_SM",
+      "label": "Small Wall Shelf",
+      "category": "storage",
       "footprintW": 1,
       "footprintH": 1,
       "isDesk": false,
-      "canPlaceOnWalls": false,
+      "canPlaceOnWalls": true,
       "discard": false
     },
     {
       "id": "ASSET_109",
       "paddedX": 200,
-      "paddedY": 395,
+      "paddedY": 392,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "FRAME_PICTURE_SM",
-      "label": "Small Picture Frame",
-      "category": "decor",
+      "name": "MONITOR_CRT_SM",
+      "label": "Small CRT Monitor",
+      "category": "electronics",
       "footprintW": 1,
       "footprintH": 1,
       "isDesk": false,
@@ -2781,7 +1895,7 @@
       "footprintW": 2,
       "footprintH": 1,
       "isDesk": false,
-      "canPlaceOnWalls": false,
+      "canPlaceOnWalls": true,
       "discard": false
     },
     {
@@ -2796,7 +1910,7 @@
       "footprintW": 2,
       "footprintH": 1,
       "isDesk": false,
-      "canPlaceOnWalls": false,
+      "canPlaceOnWalls": true,
       "discard": false
     },
     {
@@ -2811,7 +1925,7 @@
       "footprintW": 1,
       "footprintH": 1,
       "isDesk": false,
-      "canPlaceOnWalls": false,
+      "canPlaceOnWalls": true,
       "discard": false
     },
     {
@@ -2820,13 +1934,13 @@
       "paddedY": 395,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "BOOKSHELF_WOOD_SM",
-      "label": "Small Wooden Bookshelf",
-      "category": "storage",
+      "name": "BULLETIN_BOARD_WOOD",
+      "label": "Wooden Bulletin Board",
+      "category": "decor",
       "footprintW": 1,
       "footprintH": 1,
       "isDesk": false,
-      "canPlaceOnWalls": false,
+      "canPlaceOnWalls": true,
       "discard": false
     },
     {
@@ -2835,13 +1949,13 @@
       "paddedY": 395,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "BOOKSHELF_WOOD_SM",
-      "label": "Small Wooden Bookshelf",
-      "category": "storage",
+      "name": "PICTURE_FRAME_PORTRAIT_SM",
+      "label": "Small Portrait Frame",
+      "category": "decor",
       "footprintW": 1,
       "footprintH": 1,
       "isDesk": false,
-      "canPlaceOnWalls": false,
+      "canPlaceOnWalls": true,
       "discard": false
     },
     {
@@ -2856,19 +1970,34 @@
       "footprintW": 1,
       "footprintH": 1,
       "isDesk": false,
-      "canPlaceOnWalls": false,
+      "canPlaceOnWalls": true,
       "discard": false
     },
     {
       "id": "ASSET_111",
       "paddedX": 241,
-      "paddedY": 400,
+      "paddedY": 399,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "WINDOW_SMALL",
-      "label": "Small Window",
+      "name": "WINDOW_SMALL_DOUBLE",
+      "label": "Small Double Window",
       "category": "decor",
       "footprintW": 1,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_113",
+      "paddedX": 179,
+      "paddedY": 416,
+      "paddedWidth": 42,
+      "paddedHeight": 16,
+      "name": "TRASH_CAN_SM",
+      "label": "Small Trash Can",
+      "category": "misc",
+      "footprintW": 3,
       "footprintH": 1,
       "isDesk": false,
       "canPlaceOnWalls": false,
@@ -2877,26 +2006,26 @@
     {
       "id": "ASSET_122",
       "paddedX": 0,
-      "paddedY": 418,
+      "paddedY": 416,
       "paddedWidth": 32,
       "paddedHeight": 32,
-      "name": "CHALKBOARD_WALL_SM",
-      "label": "Small Wall Chalkboard",
+      "name": "CHALKBOARD_GREEN_SM",
+      "label": "Green Chalkboard Small",
       "category": "decor",
       "footprintW": 2,
       "footprintH": 2,
       "isDesk": false,
-      "canPlaceOnWalls": false,
+      "canPlaceOnWalls": true,
       "discard": false
     },
     {
       "id": "ASSET_118",
       "paddedX": 32,
-      "paddedY": 418,
+      "paddedY": 417,
       "paddedWidth": 32,
       "paddedHeight": 32,
       "name": "MONITOR_DESKTOP_SM",
-      "label": "Small Desktop Monitor",
+      "label": "Desktop Monitor Small",
       "category": "electronics",
       "footprintW": 2,
       "footprintH": 2,
@@ -2907,116 +2036,29 @@
     {
       "id": "ASSET_119",
       "paddedX": 64,
-      "paddedY": 418,
+      "paddedY": 417,
       "paddedWidth": 32,
       "paddedHeight": 32,
-      "erasedPixels": [
-        {
-          "x": 5,
-          "y": 31
-        },
-        {
-          "x": 6,
-          "y": 31
-        },
-        {
-          "x": 7,
-          "y": 31
-        },
-        {
-          "x": 8,
-          "y": 31
-        },
-        {
-          "x": 9,
-          "y": 31
-        },
-        {
-          "x": 10,
-          "y": 31
-        },
-        {
-          "x": 11,
-          "y": 31
-        },
-        {
-          "x": 12,
-          "y": 31
-        },
-        {
-          "x": 13,
-          "y": 31
-        },
-        {
-          "x": 14,
-          "y": 31
-        },
-        {
-          "x": 15,
-          "y": 31
-        },
-        {
-          "x": 16,
-          "y": 31
-        },
-        {
-          "x": 17,
-          "y": 31
-        },
-        {
-          "x": 18,
-          "y": 31
-        },
-        {
-          "x": 19,
-          "y": 31
-        },
-        {
-          "x": 20,
-          "y": 31
-        },
-        {
-          "x": 21,
-          "y": 31
-        },
-        {
-          "x": 22,
-          "y": 31
-        },
-        {
-          "x": 23,
-          "y": 31
-        },
-        {
-          "x": 24,
-          "y": 31
-        },
-        {
-          "x": 25,
-          "y": 31
-        },
-        {
-          "x": 26,
-          "y": 31
-        },
-        {
-          "x": 27,
-          "y": 31
-        },
-        {
-          "x": 28,
-          "y": 31
-        },
-        {
-          "x": 4,
-          "y": 31
-        }
-      ],
       "name": "CERTIFICATE_WALL_FRAME",
-      "label": "Wall Certificate Frame",
+      "label": "Framed Certificate",
       "category": "decor",
       "footprintW": 2,
       "footprintH": 2,
+      "isDesk": false,
+      "canPlaceOnWalls": true,
+      "discard": false
+    },
+    {
+      "id": "ASSET_116",
+      "paddedX": 227,
+      "paddedY": 413,
+      "paddedWidth": 32,
+      "paddedHeight": 16,
+      "name": "MONITOR_CRT_SM",
+      "label": "Small CRT Monitor",
+      "category": "electronics",
+      "footprintW": 2,
+      "footprintH": 1,
       "isDesk": false,
       "canPlaceOnWalls": false,
       "discard": false
@@ -3024,121 +2066,11 @@
     {
       "id": "ASSET_120",
       "paddedX": 96,
-      "paddedY": 419,
+      "paddedY": 417,
       "paddedWidth": 32,
       "paddedHeight": 32,
-      "erasedPixels": [
-        {
-          "x": 10,
-          "y": 30
-        },
-        {
-          "x": 10,
-          "y": 31
-        },
-        {
-          "x": 9,
-          "y": 31
-        },
-        {
-          "x": 9,
-          "y": 30
-        },
-        {
-          "x": 11,
-          "y": 30
-        },
-        {
-          "x": 12,
-          "y": 30
-        },
-        {
-          "x": 11,
-          "y": 31
-        },
-        {
-          "x": 12,
-          "y": 31
-        },
-        {
-          "x": 13,
-          "y": 31
-        },
-        {
-          "x": 14,
-          "y": 31
-        },
-        {
-          "x": 15,
-          "y": 31
-        },
-        {
-          "x": 16,
-          "y": 31
-        },
-        {
-          "x": 17,
-          "y": 30
-        },
-        {
-          "x": 18,
-          "y": 30
-        },
-        {
-          "x": 19,
-          "y": 30
-        },
-        {
-          "x": 20,
-          "y": 30
-        },
-        {
-          "x": 21,
-          "y": 30
-        },
-        {
-          "x": 22,
-          "y": 30
-        },
-        {
-          "x": 23,
-          "y": 30
-        },
-        {
-          "x": 24,
-          "y": 31
-        },
-        {
-          "x": 23,
-          "y": 31
-        },
-        {
-          "x": 22,
-          "y": 31
-        },
-        {
-          "x": 21,
-          "y": 31
-        },
-        {
-          "x": 20,
-          "y": 31
-        },
-        {
-          "x": 19,
-          "y": 31
-        },
-        {
-          "x": 18,
-          "y": 31
-        },
-        {
-          "x": 17,
-          "y": 31
-        }
-      ],
-      "name": "MONITOR_DESKTOP_SM",
-      "label": "Small Desktop Monitor",
+      "name": "MONITOR_CHART_SM",
+      "label": "Small Monitor With Chart",
       "category": "electronics",
       "footprintW": 2,
       "footprintH": 2,
@@ -3147,61 +2079,16 @@
       "discard": false
     },
     {
-      "id": "ASSET_114",
-      "paddedX": 192,
-      "paddedY": 416,
-      "paddedWidth": 16,
-      "paddedHeight": 16,
-      "name": "TRASH_CAN_METAL_SM",
-      "label": "Small Metal Trash Can",
-      "category": "misc",
-      "footprintW": 1,
-      "footprintH": 1,
-      "isDesk": false,
-      "canPlaceOnWalls": false,
-      "discard": false
-    },
-    {
-      "id": "ASSET_112",
-      "paddedX": 192,
-      "paddedY": 416,
-      "paddedWidth": 32,
-      "paddedHeight": 16,
-      "name": "FILING_CABINET_SM",
-      "label": "Small Filing Cabinet",
-      "category": "storage",
-      "footprintW": 2,
-      "footprintH": 1,
-      "isDesk": false,
-      "canPlaceOnWalls": false,
-      "discard": false
-    },
-    {
-      "id": "ASSET_121",
-      "paddedX": 152,
-      "paddedY": 424,
-      "paddedWidth": 16,
-      "paddedHeight": 16,
-      "name": "WINDOW_CURTAIN_SM",
-      "label": "Small Window with Curtain",
-      "category": "wall",
-      "footprintW": 1,
-      "footprintH": 1,
-      "isDesk": false,
-      "canPlaceOnWalls": true,
-      "discard": false
-    },
-    {
-      "id": "ASSET_123",
-      "paddedX": 131,
-      "paddedY": 426,
-      "paddedWidth": 16,
-      "paddedHeight": 16,
-      "name": "PHONE_MOBILE_SM",
-      "label": "Mobile Phone",
+      "id": "ASSET_124",
+      "paddedX": 128,
+      "paddedY": 418,
+      "paddedWidth": 48,
+      "paddedHeight": 32,
+      "name": "MONITOR_DESKTOP_SM",
+      "label": "Small Desktop Monitor",
       "category": "electronics",
-      "footprintW": 1,
-      "footprintH": 1,
+      "footprintW": 3,
+      "footprintH": 2,
       "isDesk": false,
       "canPlaceOnWalls": false,
       "discard": false
@@ -3209,77 +2096,11 @@
     {
       "id": "ASSET_125",
       "paddedX": 176,
-      "paddedY": 431,
+      "paddedY": 432,
       "paddedWidth": 32,
       "paddedHeight": 16,
-      "erasedPixels": [
-        {
-          "x": 20,
-          "y": 1
-        },
-        {
-          "x": 21,
-          "y": 1
-        },
-        {
-          "x": 22,
-          "y": 1
-        },
-        {
-          "x": 23,
-          "y": 1
-        },
-        {
-          "x": 24,
-          "y": 1
-        },
-        {
-          "x": 25,
-          "y": 1
-        },
-        {
-          "x": 26,
-          "y": 1
-        },
-        {
-          "x": 27,
-          "y": 1
-        },
-        {
-          "x": 27,
-          "y": 0
-        },
-        {
-          "x": 26,
-          "y": 0
-        },
-        {
-          "x": 25,
-          "y": 0
-        },
-        {
-          "x": 24,
-          "y": 0
-        },
-        {
-          "x": 23,
-          "y": 0
-        },
-        {
-          "x": 22,
-          "y": 0
-        },
-        {
-          "x": 21,
-          "y": 0
-        },
-        {
-          "x": 20,
-          "y": 0
-        }
-      ],
       "name": "PRINTER_OFFICE_SM",
-      "label": "Office Printer Small",
+      "label": "Small Office Printer",
       "category": "electronics",
       "footprintW": 2,
       "footprintH": 1,
@@ -3308,8 +2129,8 @@
       "paddedY": 432,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "CABINET_WOOD_SM",
-      "label": "Small Wooden Cabinet",
+      "name": "CRATE_WOOD_SM",
+      "label": "Small Wooden Crate",
       "category": "storage",
       "footprintW": 1,
       "footprintH": 1,
@@ -3319,109 +2140,27 @@
     },
     {
       "id": "ASSET_133_0_0",
-      "paddedX": 48,
-      "paddedY": 443,
+      "paddedX": 49,
+      "paddedY": 448,
       "paddedWidth": 16,
-      "paddedHeight": 32,
-      "erasedPixels": [
-        {
-          "x": 12,
-          "y": 0
-        },
-        {
-          "x": 11,
-          "y": 0
-        },
-        {
-          "x": 10,
-          "y": 0
-        },
-        {
-          "x": 9,
-          "y": 0
-        },
-        {
-          "x": 8,
-          "y": 0
-        },
-        {
-          "x": 7,
-          "y": 0
-        },
-        {
-          "x": 6,
-          "y": 1
-        },
-        {
-          "x": 5,
-          "y": 1
-        },
-        {
-          "x": 4,
-          "y": 1
-        },
-        {
-          "x": 3,
-          "y": 1
-        },
-        {
-          "x": 2,
-          "y": 1
-        },
-        {
-          "x": 1,
-          "y": 1
-        },
-        {
-          "x": 0,
-          "y": 1
-        },
-        {
-          "x": 3,
-          "y": 0
-        },
-        {
-          "x": 4,
-          "y": 0
-        },
-        {
-          "x": 5,
-          "y": 0
-        },
-        {
-          "x": 2,
-          "y": 0
-        },
-        {
-          "x": 1,
-          "y": 0
-        },
-        {
-          "x": 0,
-          "y": 0
-        },
-        {
-          "x": 6,
-          "y": 0
-        }
-      ],
-      "name": "PLANT_CACTUS_POT_SM",
-      "label": "Small Potted Cactus",
-      "category": "wall",
+      "paddedHeight": 16,
+      "name": "PLANT_SMALL_GREEN",
+      "label": "Small Green Plant",
+      "category": "decor",
       "footprintW": 1,
-      "footprintH": 2,
+      "footprintH": 1,
       "isDesk": false,
-      "canPlaceOnWalls": true,
+      "canPlaceOnWalls": false,
       "discard": false
     },
     {
       "id": "ASSET_133_1_0",
       "paddedX": 49,
-      "paddedY": 463,
+      "paddedY": 464,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "CUP_COFFEE_SM",
-      "label": "Small Coffee Cup",
+      "name": "MUG_COFFEE_SM",
+      "label": "Coffee Mug",
       "category": "decor",
       "footprintW": 1,
       "footprintH": 1,
@@ -3432,110 +2171,12 @@
     {
       "id": "ASSET_134",
       "paddedX": 0,
-      "paddedY": 451,
+      "paddedY": 449,
       "paddedWidth": 32,
       "paddedHeight": 32,
-      "erasedPixels": [
-        {
-          "x": 4,
-          "y": 31
-        },
-        {
-          "x": 5,
-          "y": 31
-        },
-        {
-          "x": 6,
-          "y": 31
-        },
-        {
-          "x": 7,
-          "y": 31
-        },
-        {
-          "x": 8,
-          "y": 31
-        },
-        {
-          "x": 9,
-          "y": 31
-        },
-        {
-          "x": 10,
-          "y": 31
-        },
-        {
-          "x": 11,
-          "y": 31
-        },
-        {
-          "x": 12,
-          "y": 31
-        },
-        {
-          "x": 13,
-          "y": 31
-        },
-        {
-          "x": 14,
-          "y": 31
-        },
-        {
-          "x": 15,
-          "y": 31
-        },
-        {
-          "x": 16,
-          "y": 31
-        },
-        {
-          "x": 17,
-          "y": 31
-        },
-        {
-          "x": 18,
-          "y": 31
-        },
-        {
-          "x": 19,
-          "y": 31
-        },
-        {
-          "x": 20,
-          "y": 31
-        },
-        {
-          "x": 21,
-          "y": 31
-        },
-        {
-          "x": 22,
-          "y": 31
-        },
-        {
-          "x": 23,
-          "y": 31
-        },
-        {
-          "x": 24,
-          "y": 31
-        },
-        {
-          "x": 25,
-          "y": 31
-        },
-        {
-          "x": 26,
-          "y": 31
-        },
-        {
-          "x": 27,
-          "y": 31
-        }
-      ],
-      "name": "CERTIFICATE_WALL_SM",
-      "label": "Wall Certificate",
-      "category": "decor",
+      "name": "MONITOR_DESKTOP_SM",
+      "label": "Desktop Monitor Small",
+      "category": "electronics",
       "footprintW": 2,
       "footprintH": 2,
       "isDesk": false,
@@ -3548,8 +2189,8 @@
       "paddedY": 448,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "PLANT_CACTUS_SM",
-      "label": "Small Cactus Plant",
+      "name": "CACTUS_PLANT_POT_SM",
+      "label": "Small Potted Cactus",
       "category": "decor",
       "footprintW": 1,
       "footprintH": 1,
@@ -3579,7 +2220,7 @@
       "paddedWidth": 16,
       "paddedHeight": 16,
       "name": "PLANT_CACTUS_SM",
-      "label": "Small Potted Cactus",
+      "label": "Small Cactus Plant",
       "category": "decor",
       "footprintW": 1,
       "footprintH": 1,
@@ -3638,8 +2279,8 @@
       "paddedY": 448,
       "paddedWidth": 32,
       "paddedHeight": 32,
-      "name": "SHELF_WOOD_SM",
-      "label": "Small Wooden Shelf",
+      "name": "BOOKSHELF_WOOD_SM",
+      "label": "Small Wooden Bookshelf",
       "category": "storage",
       "footprintW": 2,
       "footprintH": 2,
@@ -3653,8 +2294,8 @@
       "paddedY": 448,
       "paddedWidth": 32,
       "paddedHeight": 32,
-      "name": "SHELF_WOOD_SM",
-      "label": "Small Wooden Shelf",
+      "name": "BOOKSHELF_WOOD_SM",
+      "label": "Small Wooden Bookshelf",
       "category": "storage",
       "footprintW": 2,
       "footprintH": 2,
@@ -3668,8 +2309,8 @@
       "paddedY": 448,
       "paddedWidth": 32,
       "paddedHeight": 32,
-      "name": "CRATES_STACKED_WOOD",
-      "label": "Stacked Wooden Crates",
+      "name": "BOXES_STACKED_SM",
+      "label": "Stacked Cardboard Boxes",
       "category": "storage",
       "footprintW": 2,
       "footprintH": 2,
@@ -3678,13 +2319,13 @@
       "discard": false
     },
     {
-      "id": "ASSET_132",
-      "paddedX": 32,
-      "paddedY": 455,
+      "id": "ASSET_132_0_0",
+      "paddedX": 33,
+      "paddedY": 448,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "CACTUS_POT_SM",
-      "label": "Small Potted Cactus",
+      "name": "PLANT_CACTUS_SM",
+      "label": "Small Cactus Plant",
       "category": "decor",
       "footprintW": 1,
       "footprintH": 1,
@@ -3693,29 +2334,14 @@
       "discard": false
     },
     {
-      "id": "ASSET_140",
-      "paddedX": 65,
+      "id": "ASSET_132_1_0",
+      "paddedX": 33,
       "paddedY": 464,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "CACTUS_PLANT_POT_SM",
-      "label": "Small Potted Cactus",
-      "category": "decor",
-      "footprintW": 1,
-      "footprintH": 1,
-      "isDesk": false,
-      "canPlaceOnWalls": false,
-      "discard": false
-    },
-    {
-      "id": "ASSET_141",
-      "paddedX": 81,
-      "paddedY": 464,
-      "paddedWidth": 16,
-      "paddedHeight": 16,
-      "name": "CACTUS_PLANT_POT_SM",
-      "label": "Small Potted Cactus",
-      "category": "wall",
+      "name": "SHELF_WALL_WOOD_SM",
+      "label": "Small Wooden Wall Shelf",
+      "category": "storage",
       "footprintW": 1,
       "footprintH": 1,
       "isDesk": false,
@@ -3723,8 +2349,8 @@
       "discard": false
     },
     {
-      "id": "ASSET_142",
-      "paddedX": 97,
+      "id": "ASSET_140",
+      "paddedX": 65,
       "paddedY": 464,
       "paddedWidth": 16,
       "paddedHeight": 16,
@@ -3738,12 +2364,42 @@
       "discard": false
     },
     {
+      "id": "ASSET_141",
+      "paddedX": 81,
+      "paddedY": 464,
+      "paddedWidth": 16,
+      "paddedHeight": 16,
+      "name": "PLANT_CACTUS_SM",
+      "label": "Small Cactus Plant",
+      "category": "decor",
+      "footprintW": 1,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": false,
+      "discard": false
+    },
+    {
+      "id": "ASSET_142",
+      "paddedX": 97,
+      "paddedY": 464,
+      "paddedWidth": 16,
+      "paddedHeight": 16,
+      "name": "PLANT_CACTUS_POT_SM",
+      "label": "Small Potted Cactus",
+      "category": "decor",
+      "footprintW": 1,
+      "footprintH": 1,
+      "isDesk": false,
+      "canPlaceOnWalls": false,
+      "discard": false
+    },
+    {
       "id": "ASSET_143",
       "paddedX": 113,
       "paddedY": 464,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "PLANT_CACTUS_SM",
+      "name": "PLANT_CACTUS_POT_SM",
       "label": "Small Potted Cactus",
       "category": "decor",
       "footprintW": 1,
@@ -3755,12 +2411,12 @@
     {
       "id": "ASSET_144",
       "paddedX": 0,
-      "paddedY": 478,
+      "paddedY": 480,
       "paddedWidth": 32,
       "paddedHeight": 16,
       "name": "WHITEBOARD_SM",
       "label": "Small Whiteboard",
-      "category": "wall",
+      "category": "decor",
       "footprintW": 2,
       "footprintH": 1,
       "isDesk": false,
@@ -3770,245 +2426,27 @@
     {
       "id": "ASSET_145",
       "paddedX": 32,
-      "paddedY": 478,
+      "paddedY": 480,
       "paddedWidth": 32,
       "paddedHeight": 16,
-      "name": "WHITEBOARD_WALL_SM",
-      "label": "Small Wall Whiteboard",
+      "name": "WHITEBOARD_SM",
+      "label": "Small Whiteboard",
       "category": "decor",
       "footprintW": 2,
       "footprintH": 1,
       "isDesk": false,
-      "canPlaceOnWalls": false,
+      "canPlaceOnWalls": true,
       "discard": false
     },
     {
       "id": "ASSET_146",
       "paddedX": 64,
-      "paddedY": 478,
+      "paddedY": 480,
       "paddedWidth": 32,
       "paddedHeight": 16,
-      "erasedPixels": [
-        {
-          "x": 5,
-          "y": 1
-        },
-        {
-          "x": 6,
-          "y": 2
-        },
-        {
-          "x": 7,
-          "y": 2
-        },
-        {
-          "x": 8,
-          "y": 2
-        },
-        {
-          "x": 9,
-          "y": 2
-        },
-        {
-          "x": 10,
-          "y": 2
-        },
-        {
-          "x": 11,
-          "y": 2
-        },
-        {
-          "x": 12,
-          "y": 2
-        },
-        {
-          "x": 12,
-          "y": 1
-        },
-        {
-          "x": 13,
-          "y": 1
-        },
-        {
-          "x": 13,
-          "y": 0
-        },
-        {
-          "x": 12,
-          "y": 0
-        },
-        {
-          "x": 11,
-          "y": 0
-        },
-        {
-          "x": 10,
-          "y": 0
-        },
-        {
-          "x": 10,
-          "y": 1
-        },
-        {
-          "x": 9,
-          "y": 1
-        },
-        {
-          "x": 8,
-          "y": 1
-        },
-        {
-          "x": 7,
-          "y": 1
-        },
-        {
-          "x": 6,
-          "y": 1
-        },
-        {
-          "x": 5,
-          "y": 0
-        },
-        {
-          "x": 4,
-          "y": 0
-        },
-        {
-          "x": 6,
-          "y": 0
-        },
-        {
-          "x": 7,
-          "y": 0
-        },
-        {
-          "x": 8,
-          "y": 0
-        },
-        {
-          "x": 9,
-          "y": 0
-        },
-        {
-          "x": 11,
-          "y": 1
-        },
-        {
-          "x": 4,
-          "y": 1
-        },
-        {
-          "x": 3,
-          "y": 1
-        },
-        {
-          "x": 5,
-          "y": 2
-        },
-        {
-          "x": 14,
-          "y": 1
-        },
-        {
-          "x": 15,
-          "y": 1
-        },
-        {
-          "x": 16,
-          "y": 1
-        },
-        {
-          "x": 17,
-          "y": 1
-        },
-        {
-          "x": 18,
-          "y": 0
-        },
-        {
-          "x": 19,
-          "y": 0
-        },
-        {
-          "x": 20,
-          "y": 0
-        },
-        {
-          "x": 21,
-          "y": 0
-        },
-        {
-          "x": 22,
-          "y": 0
-        },
-        {
-          "x": 21,
-          "y": 1
-        },
-        {
-          "x": 20,
-          "y": 1
-        },
-        {
-          "x": 22,
-          "y": 1
-        },
-        {
-          "x": 23,
-          "y": 1
-        },
-        {
-          "x": 24,
-          "y": 1
-        },
-        {
-          "x": 25,
-          "y": 1
-        },
-        {
-          "x": 26,
-          "y": 1
-        },
-        {
-          "x": 25,
-          "y": 0
-        },
-        {
-          "x": 24,
-          "y": 0
-        },
-        {
-          "x": 23,
-          "y": 0
-        },
-        {
-          "x": 27,
-          "y": 1
-        },
-        {
-          "x": 28,
-          "y": 1
-        },
-        {
-          "x": 29,
-          "y": 1
-        },
-        {
-          "x": 28,
-          "y": 0
-        },
-        {
-          "x": 27,
-          "y": 0
-        },
-        {
-          "x": 26,
-          "y": 0
-        }
-      ],
-      "name": "WALL_DECOR_PLATES_ROW",
-      "label": "Decorative Wall Plates Row",
-      "category": "wall",
+      "name": "WALL_ART_TILES_BLUE",
+      "label": "Blue Decorative Wall Tiles",
+      "category": "decor",
       "footprintW": 2,
       "footprintH": 1,
       "isDesk": false,
@@ -4018,97 +2456,27 @@
     {
       "id": "ASSET_147",
       "paddedX": 108,
-      "paddedY": 479,
+      "paddedY": 480,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "erasedPixels": [
-        {
-          "x": 0,
-          "y": 1
-        },
-        {
-          "x": 0,
-          "y": 0
-        },
-        {
-          "x": 1,
-          "y": 0
-        },
-        {
-          "x": 2,
-          "y": 0
-        },
-        {
-          "x": 3,
-          "y": 0
-        },
-        {
-          "x": 4,
-          "y": 0
-        },
-        {
-          "x": 5,
-          "y": 0
-        },
-        {
-          "x": 6,
-          "y": 0
-        },
-        {
-          "x": 7,
-          "y": 0
-        },
-        {
-          "x": 8,
-          "y": 0
-        },
-        {
-          "x": 9,
-          "y": 0
-        },
-        {
-          "x": 10,
-          "y": 0
-        },
-        {
-          "x": 11,
-          "y": 0
-        },
-        {
-          "x": 12,
-          "y": 0
-        },
-        {
-          "x": 13,
-          "y": 0
-        },
-        {
-          "x": 14,
-          "y": 0
-        },
-        {
-          "x": 15,
-          "y": 0
-        }
-      ],
-      "name": "MONITOR_CRT_SM",
-      "label": "Small CRT Monitor",
-      "category": "electronics",
+      "name": "WINDOW_BLINDS_LG",
+      "label": "Large Window With Blinds",
+      "category": "decor",
       "footprintW": 1,
       "footprintH": 1,
       "isDesk": false,
-      "canPlaceOnWalls": false,
+      "canPlaceOnWalls": true,
       "discard": false
     },
     {
       "id": "ASSET_148",
       "paddedX": 0,
-      "paddedY": 494,
+      "paddedY": 496,
       "paddedWidth": 32,
       "paddedHeight": 16,
-      "name": "CHESS_BOARD_SM",
-      "label": "Chess Board",
-      "category": "decor",
+      "name": "BOOKSHELF_TALL_GREEN",
+      "label": "Tall Green Bookshelf",
+      "category": "storage",
       "footprintW": 2,
       "footprintH": 1,
       "isDesk": false,
@@ -4118,7 +2486,7 @@
     {
       "id": "ASSET_149",
       "paddedX": 32,
-      "paddedY": 494,
+      "paddedY": 496,
       "paddedWidth": 32,
       "paddedHeight": 16,
       "name": "CHESS_BOARD_SM",
@@ -4133,12 +2501,12 @@
     {
       "id": "ASSET_150",
       "paddedX": 64,
-      "paddedY": 494,
+      "paddedY": 496,
       "paddedWidth": 32,
       "paddedHeight": 16,
-      "name": "PLANTER_BOX_TRIPLE",
-      "label": "Triple Planter Box",
-      "category": "wall",
+      "name": "WALL_ART_DIAMOND_PATTERN",
+      "label": "Diamond Pattern Wall Art",
+      "category": "decor",
       "footprintW": 2,
       "footprintH": 1,
       "isDesk": false,
@@ -4148,12 +2516,12 @@
     {
       "id": "ASSET_151",
       "paddedX": 108,
-      "paddedY": 495,
+      "paddedY": 496,
       "paddedWidth": 16,
       "paddedHeight": 16,
-      "name": "WHITEBOARD_SM",
-      "label": "Small Whiteboard",
-      "category": "decor",
+      "name": "CURSOR_POINTER_ARROW",
+      "label": "Mouse Cursor Arrow",
+      "category": "misc",
       "footprintW": 1,
       "footprintH": 1,
       "isDesk": false,

@@ -105,6 +105,8 @@ export function getBlockedTiles(
   for (const item of furniture) {
     const entry = getCatalogEntry(item.type);
     if (!entry) continue;
+    // Surface items (decorative plants etc.) don't block walking
+    if (entry.canPlaceOnSurfaces) continue;
     const bgRows = entry.backgroundTiles || 0;
     for (let dr = 0; dr < entry.footprintH; dr++) {
       if (dr < bgRows) continue; // skip background rows — characters can walk through

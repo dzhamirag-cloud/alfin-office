@@ -493,6 +493,59 @@ export function renderBubbles(
   }
 }
 
+// ── Status dots (pixel-art squares, always visible above each agent) ──
+
+/** Status colors */
+const STATUS_DOT_IDLE = '#6b7280'; // gray
+const STATUS_DOT_ACTIVE = '#22c55e'; // green
+const STATUS_DOT_PERMISSION = '#f59e0b'; // amber
+const STATUS_DOT_SIZE_PX = 2; // sprite pixels (square side)
+const STATUS_DOT_OFFSET_Y = 3; // pixels above character top
+
+export function renderStatusDots(
+  ctx: CanvasRenderingContext2D,
+  characters: Character[],
+  offsetX: number,
+  offsetY: number,
+  zoom: number,
+): void {
+  for (const ch of characters) {
+    if (ch.matrixEffect) continue;
+
+    let color = STATUS_DOT_IDLE;
+    if (ch.bubbleType === 'permission') {
+      color = STATUS_DOT_PERMISSION;
+    } else if (ch.isActive) {
+      color = STATUS_DOT_ACTIVE;
+    }
+
+    const sittingOff = ch.state === CharacterState.TYPE ? CHARACTER_SITTING_OFFSET_PX : 0;
+    const s = Math.max(Math.round(STATUS_DOT_SIZE_PX * zoom), 2);
+    const cx = Math.round(offsetX + ch.x * zoom - s / 2);
+    const cy = Math.round(
+      offsetY + (ch.y + sittingOff) * zoom - 24 * zoom - STATUS_DOT_OFFSET_Y * zoom - s,
+    );
+
+    // Pixel-art: dark outline (1px border)
+    const b = Math.max(Math.round(zoom), 1);
+    ctx.fillStyle = '#0a0a14';
+    ctx.fillRect(cx - b, cy - b, s + b * 2, s + b * 2);
+
+    // Fill
+    ctx.fillStyle = color;
+    ctx.fillRect(cx, cy, s, s);
+
+    // Pulse: second smaller square blink for active
+    if (ch.isActive && ch.bubbleType !== 'permission') {
+      ctx.save();
+      ctx.globalAlpha = 0.4;
+      ctx.fillStyle = color;
+      ctx.fillRect(cx - b, cy - b, s + b * 2, s + b * 2);
+      ctx.restore();
+    }
+  }
+}
+
 export interface ButtonBounds {
   /** Center X in device pixels */
   cx: number;
@@ -591,6 +644,9 @@ export function renderFrame(
   const selectedId = selection?.selectedAgentId ?? null;
   const hoveredId = selection?.hoveredAgentId ?? null;
   renderScene(ctx, allFurniture, characters, offsetX, offsetY, zoom, selectedId, hoveredId);
+
+  // Status dots (always visible above each agent)
+  renderStatusDots(ctx, characters, offsetX, offsetY, zoom);
 
   // Speech bubbles (always on top of characters)
   renderBubbles(ctx, characters, offsetX, offsetY, zoom);
