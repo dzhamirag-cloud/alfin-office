@@ -405,7 +405,6 @@ function App() {
           agentTools={agentTools}
           subagentCharacters={subagentCharacters}
           onFollowAgent={handleFollowAgent}
-          onStopAgent={handleCloseAgent}
           onClose={() => setIsAgentListOpen(false)}
         />
       )}

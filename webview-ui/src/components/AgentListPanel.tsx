@@ -1,8 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import type { SubagentCharacter } from '../hooks/useExtensionMessages.js';
 import type { OfficeState } from '../office/engine/officeState.js';
-import type { ToolActivity } from '../office/types.js';
+import { getCharacterSprite } from '../office/engine/characters.js';
+import { getCharacterSprites } from '../office/sprites/spriteData.js';
+import type { SpriteData, ToolActivity } from '../office/types.js';
 
 interface AgentListPanelProps {
   officeState: OfficeState;
@@ -11,8 +13,45 @@ interface AgentListPanelProps {
   agentTools: Record<number, ToolActivity[]>;
   subagentCharacters: SubagentCharacter[];
   onFollowAgent: (id: number) => void;
-  onStopAgent: (id: number) => void;
   onClose: () => void;
+}
+
+const AVATAR_ZOOM = 4;
+
+/** Renders a character's current sprite as a small canvas preview */
+function AgentAvatar({ sprite }: { sprite: SpriteData }) {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const rows = sprite.length;
+    const cols = sprite[0]?.length || 0;
+    canvas.width = cols * AVATAR_ZOOM;
+    canvas.height = rows * AVATAR_ZOOM;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    ctx.imageSmoothingEnabled = false;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let r = 0; r < rows; r++) {
+      for (let c = 0; c < cols; c++) {
+        const color = sprite[r][c];
+        if (color === '') continue;
+        ctx.fillStyle = color;
+        ctx.fillRect(c * AVATAR_ZOOM, r * AVATAR_ZOOM, AVATAR_ZOOM, AVATAR_ZOOM);
+      }
+    }
+  }, [sprite]);
+
+  return (
+    <canvas
+      ref={canvasRef}
+      style={{
+        imageRendering: 'pixelated',
+        flexShrink: 0,
+      }}
+    />
+  );
 }
 
 function teamColor(name: string): string {
@@ -25,15 +64,15 @@ function teamColor(name: string): string {
 }
 
 const TOOL_DISPLAY: Record<string, string> = {
-  Read: 'Reading...',
-  Write: 'Writing...',
-  Edit: 'Editing...',
-  Bash: 'Running...',
-  Grep: 'Searching...',
-  Glob: 'Finding files...',
-  WebFetch: 'Fetching...',
-  WebSearch: 'Searching web...',
-  Task: 'Delegating...',
+  Read: 'Читает...',
+  Write: 'Пишет...',
+  Edit: 'Редактирует...',
+  Bash: 'Выполняет...',
+  Grep: 'Ищет в коде...',
+  Glob: 'Ищет файлы...',
+  WebFetch: 'Загружает...',
+  WebSearch: 'Ищет в интернете...',
+  Task: 'Делегирует...',
 };
 
 const panelBtnStyle: React.CSSProperties = {
@@ -63,7 +102,6 @@ export function AgentListPanel({
   agentTools,
   subagentCharacters,
   onFollowAgent,
-  onStopAgent,
   onClose,
 }: AgentListPanelProps) {
   const [hoveredBtn, setHoveredBtn] = useState<string | null>(null);
@@ -137,7 +175,7 @@ export function AgentListPanel({
       <div style={{ flex: 1, overflowY: 'auto', padding: '4px 0' }}>
         {agents.length === 0 ? (
           <div style={{ padding: '12px', fontSize: '22px', color: 'rgba(255,255,255,0.4)' }}>
-            No active agents
+            Нет активных агентов
           </div>
         ) : (
           agents.map((id) => {
@@ -154,7 +192,7 @@ export function AgentListPanel({
             const toolName = ch.currentTool;
             const activityText = activeTool
               ? activeTool.status
-              : (toolName && TOOL_DISPLAY[toolName]) || (isActive ? 'Working...' : 'Idle');
+              : (toolName && TOOL_DISPLAY[toolName]) || (isActive ? 'Работает...' : 'Свободен');
 
             return (
               <div
@@ -162,54 +200,54 @@ export function AgentListPanel({
                 style={{
                   borderBottom: '2px solid rgba(255,255,255,0.06)',
                   padding: '8px 12px',
+                  display: 'flex',
+                  gap: 10,
+                  alignItems: 'center',
                 }}
               >
-                {/* Name + status row */}
-                <div
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: 6,
-                    marginBottom: 4,
-                  }}
-                >
-                  <span
-                    style={{
-                      width: 8,
-                      height: 8,
-                      borderRadius: '50%',
-                      background: isWaiting
-                        ? 'var(--pixel-status-permission)'
-                        : isActive
-                          ? 'var(--pixel-status-active)'
-                          : 'rgba(255,255,255,0.2)',
-                      flexShrink: 0,
-                    }}
-                  />
-                  <span
-                    style={{
-                      fontSize: '24px',
-                      color: 'rgba(255,255,255,0.9)',
-                      overflow: 'hidden',
-                      textOverflow: 'ellipsis',
-                      whiteSpace: 'nowrap',
-                      flex: 1,
-                    }}
-                  >
-                    {ch.projectName || `Agent #${id}`}
-                  </span>
+                {/* Avatar preview — large */}
+                <div style={{ flexShrink: 0, display: 'flex', alignItems: 'center' }}>
+                  {(() => {
+                    const sprites = getCharacterSprites(ch.palette, ch.hueShift);
+                    const spriteData = getCharacterSprite(ch, sprites);
+                    return <AgentAvatar sprite={spriteData} />;
+                  })()}
                 </div>
 
-                {/* Metadata grid */}
+                {/* Right side: name, team, activity, follow */}
                 <div
-                  style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: 1,
-                    marginBottom: 4,
-                    paddingLeft: 14,
-                  }}
+                  style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', gap: 2 }}
                 >
+                  {/* Name + status dot */}
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                    <span
+                      style={{
+                        width: 8,
+                        height: 8,
+                        borderRadius: '50%',
+                        background: isWaiting
+                          ? 'var(--pixel-status-permission)'
+                          : isActive
+                            ? 'var(--pixel-status-active)'
+                            : 'rgba(255,255,255,0.2)',
+                        flexShrink: 0,
+                      }}
+                    />
+                    <span
+                      style={{
+                        fontSize: '24px',
+                        color: 'rgba(255,255,255,0.9)',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        whiteSpace: 'nowrap',
+                        flex: 1,
+                      }}
+                    >
+                      {ch.projectName || `Agent #${id}`}
+                    </span>
+                  </div>
+
+                  {/* Team */}
                   {ch.teamName && (
                     <div style={{ display: 'flex', gap: 6, alignItems: 'baseline' }}>
                       <span style={metaLabelStyle}>team</span>
@@ -218,61 +256,38 @@ export function AgentListPanel({
                       </span>
                     </div>
                   )}
-                  {ch.model && (
-                    <div style={{ display: 'flex', gap: 6, alignItems: 'baseline' }}>
-                      <span style={metaLabelStyle}>model</span>
-                      <span style={metaValueStyle}>{ch.model}</span>
-                    </div>
-                  )}
-                </div>
 
-                {/* Current activity */}
-                <div
-                  style={{
-                    fontSize: '20px',
-                    color: isActive ? 'rgba(255,255,255,0.6)' : 'rgba(255,255,255,0.25)',
-                    fontStyle: 'italic',
-                    marginBottom: 6,
-                    paddingLeft: 14,
-                    overflow: 'hidden',
-                    textOverflow: 'ellipsis',
-                    whiteSpace: 'nowrap',
-                  }}
-                >
-                  {activityText}
-                </div>
+                  {/* Activity */}
+                  <div
+                    style={{
+                      fontSize: '20px',
+                      color: isActive ? 'rgba(255,255,255,0.6)' : 'rgba(255,255,255,0.25)',
+                      fontStyle: 'italic',
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                      whiteSpace: 'nowrap',
+                    }}
+                  >
+                    {activityText}
+                  </div>
 
-                {/* Action buttons */}
-                <div style={{ display: 'flex', gap: 4, paddingLeft: 14 }}>
-                  <button
-                    style={{
-                      ...panelBtnStyle,
-                      background:
-                        hoveredBtn === `follow-${id}`
-                          ? 'rgba(255,255,255,0.15)'
-                          : panelBtnStyle.background,
-                    }}
-                    onMouseEnter={() => setHoveredBtn(`follow-${id}`)}
-                    onMouseLeave={() => setHoveredBtn(null)}
-                    onClick={() => onFollowAgent(id)}
-                  >
-                    Follow
-                  </button>
-                  <button
-                    style={{
-                      ...panelBtnStyle,
-                      color: hoveredBtn === `stop-${id}` ? '#e55' : panelBtnStyle.color,
-                      background:
-                        hoveredBtn === `stop-${id}`
-                          ? 'rgba(220,50,50,0.15)'
-                          : panelBtnStyle.background,
-                    }}
-                    onMouseEnter={() => setHoveredBtn(`stop-${id}`)}
-                    onMouseLeave={() => setHoveredBtn(null)}
-                    onClick={() => onStopAgent(id)}
-                  >
-                    Stop
-                  </button>
+                  {/* Follow button */}
+                  <div style={{ display: 'flex', gap: 4, marginTop: 2 }}>
+                    <button
+                      style={{
+                        ...panelBtnStyle,
+                        background:
+                          hoveredBtn === `follow-${id}`
+                            ? 'rgba(255,255,255,0.15)'
+                            : panelBtnStyle.background,
+                      }}
+                      onMouseEnter={() => setHoveredBtn(`follow-${id}`)}
+                      onMouseLeave={() => setHoveredBtn(null)}
+                      onClick={() => onFollowAgent(id)}
+                    >
+                      Follow
+                    </button>
+                  </div>
                 </div>
 
                 {/* Sub-agents */}

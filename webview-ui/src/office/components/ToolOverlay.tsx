@@ -28,7 +28,7 @@ function getActivityText(
     // Find the latest non-done tool
     const activeTool = [...tools].reverse().find((t) => !t.done);
     if (activeTool) {
-      if (activeTool.permissionWait) return 'Needs approval';
+      if (activeTool.permissionWait) return 'Ждёт разрешения';
       return activeTool.status;
     }
     // All tools done but agent still active (mid-turn) — keep showing last tool status
@@ -38,7 +38,7 @@ function getActivityText(
     }
   }
 
-  return 'Idle';
+  return 'Свободен';
 }
 
 export function ToolOverlay({
@@ -99,16 +99,18 @@ export function ToolOverlay({
         const screenY =
           (deviceOffsetY + (ch.y + sittingOffset - TOOL_OVERLAY_VERTICAL_OFFSET) * zoom) / dpr;
 
-        // Get activity text
+        // Get activity text — prefer last speech text, fallback to tool status
         const subHasPermission = isSub && ch.bubbleType === 'permission';
         let activityText: string;
         if (isSub) {
           if (subHasPermission) {
-            activityText = 'Needs approval';
+            activityText = 'Ждёт разрешения';
           } else {
             const sub = subagentCharacters.find((s) => s.id === id);
-            activityText = sub ? sub.label : 'Subtask';
+            activityText = sub ? sub.label : 'Подзадача';
           }
+        } else if (ch.speechText) {
+          activityText = ch.speechText;
         } else {
           activityText = getActivityText(id, agentTools, ch.isActive);
         }

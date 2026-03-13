@@ -77,6 +77,8 @@ export function createCharacter(
     seatId,
     bubbleType: null,
     bubbleTimer: 0,
+    speechText: null,
+    speechTimer: 0,
     seatTimer: 0,
     isSubagent: false,
     parentAgentId: null,

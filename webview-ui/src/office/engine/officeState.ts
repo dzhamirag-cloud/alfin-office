@@ -612,6 +612,13 @@ export class OfficeState {
     }
   }
 
+  setSpeechBubble(id: number, text: string): void {
+    const ch = this.characters.get(id);
+    if (ch) {
+      ch.speechText = text;
+    }
+  }
+
   showWaitingBubble(id: number): void {
     const ch = this.characters.get(id);
     if (ch) {

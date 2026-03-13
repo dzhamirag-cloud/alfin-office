@@ -52,37 +52,37 @@ function formatToolStatus(toolName: string, input: Record<string, unknown>): str
   const base = (p: unknown) => (typeof p === 'string' ? path.basename(p) : '');
   switch (toolName) {
     case 'Read':
-      return `Reading ${base(input.file_path)}`;
+      return `Читает ${base(input.file_path)}`;
     case 'Edit':
-      return `Editing ${base(input.file_path)}`;
+      return `Редактирует ${base(input.file_path)}`;
     case 'Write':
-      return `Writing ${base(input.file_path)}`;
+      return `Пишет ${base(input.file_path)}`;
     case 'Bash': {
       const cmd = (input.command as string) || '';
-      return `Running: ${cmd.length > BASH_CMD_MAX_LEN ? cmd.slice(0, BASH_CMD_MAX_LEN) + '\u2026' : cmd}`;
+      return `Выполняет: ${cmd.length > BASH_CMD_MAX_LEN ? cmd.slice(0, BASH_CMD_MAX_LEN) + '\u2026' : cmd}`;
     }
     case 'Glob':
-      return 'Searching files';
+      return 'Ищет файлы';
     case 'Grep':
-      return 'Searching code';
+      return 'Ищет в коде';
     case 'WebFetch':
-      return 'Fetching web content';
+      return 'Загружает страницу';
     case 'WebSearch':
-      return 'Searching the web';
+      return 'Ищет в интернете';
     case 'Task': {
       const desc = typeof input.description === 'string' ? input.description : '';
       return desc
-        ? `Subtask: ${desc.length > TASK_DESC_MAX_LEN ? desc.slice(0, TASK_DESC_MAX_LEN) + '\u2026' : desc}`
-        : 'Running subtask';
+        ? `Подзадача: ${desc.length > TASK_DESC_MAX_LEN ? desc.slice(0, TASK_DESC_MAX_LEN) + '\u2026' : desc}`
+        : 'Выполняет подзадачу';
     }
     case 'AskUserQuestion':
-      return 'Waiting for your answer';
+      return 'Ждёт ответа';
     case 'EnterPlanMode':
-      return 'Planning';
+      return 'Планирует';
     case 'NotebookEdit':
-      return 'Editing notebook';
+      return 'Редактирует notebook';
     default:
-      return `Using ${toolName}`;
+      return `Использует ${toolName}`;
   }
 }
 
@@ -200,9 +200,23 @@ export function processTranscriptLine(
         type: string;
         id?: string;
         name?: string;
+        text?: string;
         input?: Record<string, unknown>;
       }>;
       const hasToolUse = blocks.some((b) => b.type === 'tool_use' || b.type === 'toolCall');
+
+      // Extract text blocks and send as speech bubble
+      for (const block of blocks) {
+        if (block.type === 'text' && block.text) {
+          const snippet = block.text.trim();
+          if (snippet.length > 0) {
+            // Take first line, truncate to ~80 chars
+            const firstLine = snippet.split('\n')[0];
+            const display = firstLine.length > 80 ? firstLine.slice(0, 80) + '…' : firstLine;
+            sink?.postMessage({ type: 'agentSpeech', id: agentId, text: display });
+          }
+        }
+      }
 
       if (hasToolUse) {
         cancelWaitingTimer(agentId);

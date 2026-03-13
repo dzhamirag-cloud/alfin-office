@@ -249,6 +249,12 @@ export function useExtensionMessages(
           if (msg.teamName) ch.teamName = msg.teamName as string;
           if (msg.model) ch.model = msg.model as string;
         }
+      } else if (msg.type === 'agentSpeech') {
+        const id = msg.id as number;
+        const text = msg.text as string;
+        if (text) {
+          os.setSpeechBubble(id, text);
+        }
       } else if (msg.type === 'agentStatus') {
         const id = msg.id as number;
         const status = msg.status as string;

@@ -202,6 +202,10 @@ export interface Character {
   matrixEffectTimer: number;
   /** Per-column random seeds (16 values) for staggered rain timing */
   matrixEffectSeeds: number[];
+  /** Current speech bubble text (short snippet from agent's response) */
+  speechText: string | null;
+  /** Countdown timer for speech bubble (seconds, fades out near 0) */
+  speechTimer: number;
   /** Workspace folder name (only set for multi-root workspaces) */
   folderName?: string;
   /** Display name (from OpenClaw agent config or folder name) */

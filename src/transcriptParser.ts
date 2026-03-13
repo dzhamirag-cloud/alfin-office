@@ -22,37 +22,37 @@ export function formatToolStatus(toolName: string, input: Record<string, unknown
   const base = (p: unknown) => (typeof p === 'string' ? path.basename(p) : '');
   switch (toolName) {
     case 'Read':
-      return `Reading ${base(input.file_path)}`;
+      return `Читает ${base(input.file_path)}`;
     case 'Edit':
-      return `Editing ${base(input.file_path)}`;
+      return `Редактирует ${base(input.file_path)}`;
     case 'Write':
-      return `Writing ${base(input.file_path)}`;
+      return `Пишет ${base(input.file_path)}`;
     case 'Bash': {
       const cmd = (input.command as string) || '';
-      return `Running: ${cmd.length > BASH_COMMAND_DISPLAY_MAX_LENGTH ? cmd.slice(0, BASH_COMMAND_DISPLAY_MAX_LENGTH) + '\u2026' : cmd}`;
+      return `Выполняет: ${cmd.length > BASH_COMMAND_DISPLAY_MAX_LENGTH ? cmd.slice(0, BASH_COMMAND_DISPLAY_MAX_LENGTH) + '\u2026' : cmd}`;
     }
     case 'Glob':
-      return 'Searching files';
+      return 'Ищет файлы';
     case 'Grep':
-      return 'Searching code';
+      return 'Ищет в коде';
     case 'WebFetch':
-      return 'Fetching web content';
+      return 'Загружает страницу';
     case 'WebSearch':
-      return 'Searching the web';
+      return 'Ищет в интернете';
     case 'Task': {
       const desc = typeof input.description === 'string' ? input.description : '';
       return desc
-        ? `Subtask: ${desc.length > TASK_DESCRIPTION_DISPLAY_MAX_LENGTH ? desc.slice(0, TASK_DESCRIPTION_DISPLAY_MAX_LENGTH) + '\u2026' : desc}`
-        : 'Running subtask';
+        ? `Подзадача: ${desc.length > TASK_DESCRIPTION_DISPLAY_MAX_LENGTH ? desc.slice(0, TASK_DESCRIPTION_DISPLAY_MAX_LENGTH) + '\u2026' : desc}`
+        : 'Выполняет подзадачу';
     }
     case 'AskUserQuestion':
-      return 'Waiting for your answer';
+      return 'Ждёт ответа';
     case 'EnterPlanMode':
-      return 'Planning';
+      return 'Планирует';
     case 'NotebookEdit':
-      return `Editing notebook`;
+      return 'Редактирует notebook';
     default:
-      return `Using ${toolName}`;
+      return `Использует ${toolName}`;
   }
 }
 
